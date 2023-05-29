@@ -82,7 +82,6 @@ namespace Tetris
                 return;
             }
 
-            var oldLayout = data.layout;
             var newLayout = new int[data.layout.Length][];
             for (int i = 0, len = data.layout.Length; i < len; i++)
             {
@@ -90,26 +89,29 @@ namespace Tetris
                 newLayout[i] = new[] { -item[1], item[0] };
             }
 
-            data.layout = newLayout;
-
-            if (DetectCollision())
+            if (!DetectCollision(position, newLayout))
             {
-                data.layout = oldLayout;
+                data.layout = newLayout;
             }
         }
 
         public bool DetectCollision()
         {
-            return DetectCollision(position);
+            return DetectCollision(position, data.layout);
         }
 
         private bool DetectCollision(Point position)
+        {
+            return DetectCollision(position, data.layout);
+        }
+
+        private bool DetectCollision(Point position, int[][] layout)
         {
             var indexX = position.X / SizeWithSpace;
             var indexY = position.Y / SizeWithSpace;
             var mapData = Game.Instance.data;
 
-            foreach (var item in data.layout)
+            foreach (var item in layout)
             {
                 var itemIndexX = indexX + item[0];
                 var itemIndexY = indexY + item[1];
