@@ -6,6 +6,7 @@ namespace Tetris
     internal struct BrickData
     {
         public bool rotatable;
+        public bool penetrable;
         public int[][] layout;
     }
 }

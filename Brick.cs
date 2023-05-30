@@ -9,8 +9,10 @@ namespace Tetris
         public const int Size = 40;
         public const int Space = 2;
         public const int SizeWithSpace = Size + Space;
-        private BrickData data;
         public Point position { get; private set; }
+
+        private BrickData data;
+        private PenetrateState penetrateState;
 
         public Brick(BrickData data)
         {
@@ -33,16 +35,46 @@ namespace Tetris
             return min;
         }
 
-        public void Paint(Graphics g)
+        public Rectangle GetBound()
         {
-            Paint(g, position, 1);
+            var topLeft = new Point(int.MaxValue, int.MaxValue);
+            var bottomRight = new Point(int.MinValue, int.MinValue);
+            foreach (var item in data.layout)
+            {
+                if (item[0] < topLeft.X)
+                {
+                    topLeft.X = item[0];
+                }
+
+                if (item[0] > bottomRight.X)
+                {
+                    bottomRight.X = item[0];
+                }
+
+                if (item[1] < topLeft.Y)
+                {
+                    topLeft.Y = item[1];
+                }
+
+                if (item[1] > bottomRight.Y)
+                {
+                    bottomRight.Y = item[1];
+                }
+            }
+
+            return new Rectangle(topLeft.X, topLeft.Y, bottomRight.X - topLeft.X + 1, bottomRight.Y - topLeft.Y + 1);
         }
 
-        public void Paint(Graphics g, Point position, float scale)
+        public void Paint(Graphics g)
+        {
+            Paint(g, position.X, position.Y, 1);
+        }
+
+        public void Paint(Graphics g, float posX, float posY, float scale)
         {
             var containerState = g.BeginContainer();
 
-            g.TranslateTransform(position.X, position.Y);
+            g.TranslateTransform(posX, posY);
             g.ScaleTransform(scale, scale);
 
             foreach (var item in data.layout)
@@ -113,6 +145,9 @@ namespace Tetris
 
         private bool DetectCollision(Point position, int[][] layout)
         {
+            var detected = false;
+            var beyondLowerBound = false;
+            var beyondHorizontalBound = false;
             var indexX = position.X / SizeWithSpace;
             var indexY = position.Y / SizeWithSpace;
             var mapData = Game.Instance.data;
@@ -123,16 +158,47 @@ namespace Tetris
                 var itemIndexY = indexY + item[1];
                 if (itemIndexX < 0 || itemIndexY < 0 || itemIndexX >= mapData.GetLength(0) || itemIndexY >= mapData.GetLength(1))
                 {
-                    return true;
+                    detected = true;
+                    beyondHorizontalBound = itemIndexX < 0 || itemIndexX >= mapData.GetLength(0);
+                    beyondLowerBound = itemIndexY >= mapData.GetLength(1);
+                    break;
                 }
 
                 if (mapData[itemIndexX, itemIndexY])
                 {
-                    return true;
+                    detected = true;
+                    break;
                 }
             }
 
-            return false;
+            if (data.penetrable && !beyondHorizontalBound)
+            {
+                if (detected)
+                {
+                    if (penetrateState == PenetrateState.OnGoing)
+                    {
+                        detected = false;
+                        if (beyondLowerBound)
+                        {
+                            Game.Instance.CreateBrick();
+                        }
+                    }
+                    else if (penetrateState == PenetrateState.NotStart)
+                    {
+                        penetrateState = PenetrateState.OnGoing;
+                        detected = beyondLowerBound;
+                    }
+                }
+                else
+                {
+                    if (penetrateState == PenetrateState.OnGoing)
+                    {
+                        penetrateState = PenetrateState.Penetrated;
+                    }
+                }
+            }
+
+            return detected;
         }
 
         public void Combine()

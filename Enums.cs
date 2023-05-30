@@ -10,4 +10,11 @@ namespace Tetris
         Right,
         Down
     }
+
+    public enum PenetrateState
+    {
+        NotStart,
+        OnGoing,
+        Penetrated
+    }
 }

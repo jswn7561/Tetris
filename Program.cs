@@ -10,8 +10,8 @@ namespace Tetris
         [STAThread]
         static void Main()
         {
-            AddFontResource(@"C:\Users\admin\Documents\GitHub\Tetris\Assets\Font\kleptocracy titling rg.ttf");
-            AddFontResource(@"C:\Users\admin\Documents\GitHub\Tetris\Assets\Font\kleptocracy titling bd.ttf");
+            AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling rg.ttf");
+            AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling bd.ttf");
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -19,7 +19,9 @@ namespace Tetris
         }
 
         [DllImport("gdi32.dll", EntryPoint="AddFontResourceW", SetLastError=true)]
-        public static extern int AddFontResource([In][MarshalAs(UnmanagedType.LPWStr)]
-            string lpFileName);
+        public static extern int AddFontResource([In][MarshalAs(UnmanagedType.LPWStr)] string lpFileName);
+
+        [DllImport("kernel32.dll")]
+        public static extern void AllocConsole();
     }
 }

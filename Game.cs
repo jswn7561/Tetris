@@ -74,6 +74,11 @@ namespace Tetris
                 nextBrick = new Brick(brickConfigs[random.Next(0, brickConfigs.Length)]);
             }
 
+            if (brick.DetectCollision())
+            {
+                Stop();
+            }
+
             PaintNextBrick();
         }
 
@@ -94,10 +99,6 @@ namespace Tetris
             brick.Combine();
             RemoveFilledRows();
             CreateBrick();
-            if (brick.DetectCollision())
-            {
-                Stop();
-            }
         }
 
         private void RemoveFilledRows()
@@ -153,7 +154,6 @@ namespace Tetris
         {
             var g = Graphics.FromImage(mapImg);
             g.Clear(Color.Transparent);
-            brick.Paint(g);
 
             for (int i = 0, lenX = data.GetLength(0); i < lenX; i++)
             {
@@ -166,14 +166,23 @@ namespace Tetris
                 }
             }
 
+            brick.Paint(g);
             OnMapPaint?.Invoke(mapImg);
         }
 
         private void PaintNextBrick()
         {
+            var scale = 0.5f;
+            var scaleSizeWithSpace = Brick.SizeWithSpace * scale;
+            var bound = nextBrick.GetBound();
+            var padding = new PointF((nextBrickImg.Size.Width - bound.Width * scaleSizeWithSpace) / 2,
+                (nextBrickImg.Size.Height - bound.Height * scaleSizeWithSpace) / 2);
+            var origin = new PointF(padding.X - bound.X * scaleSizeWithSpace,
+                padding.Y - bound.Y * scaleSizeWithSpace);
+
             var g = Graphics.FromImage(nextBrickImg);
             g.Clear(Color.Transparent);
-            nextBrick.Paint(g, new Point(50, 50), 0.5f);
+            nextBrick.Paint(g, origin.X, origin.Y, scale);
             OnNextBrickPaint?.Invoke(nextBrickImg);
         }
     }
