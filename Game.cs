@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Resources;
 using System.Text;
 using System.Text.Unicode;
 using Newtonsoft.Json;
@@ -10,21 +11,27 @@ namespace Tetris
 {
     internal class Game
     {
-        private static Game? instance;
+        private static Game instance;
         public static Game Instance => instance ??= new Game();
         public Size mapSize { get; private set; }
         public Brick brick { get; private set; }
-        public PictureBox map { get; private set; }
-        public Timer timer { get; private set; }
+        public Brick nextBrick { get; private set; }
         public bool[,] data { get; private set; }
-        private BrickData[]? brickConfigs;
-        private Random random;
+        public event Action<Bitmap> OnMapPaint;
+        public event Action<Bitmap> OnNextBrickPaint;
+        public event Action OnStart;
+        public event Action OnStop;
 
-        public void Init(PictureBox map, Timer timer)
+        private BrickData[] brickConfigs;
+        private Random random;
+        private Bitmap mapImg;
+        private Bitmap nextBrickImg;
+
+        public void Init(Size mapSize, Size nextBrickBoxSize)
         {
-            this.map = map;
-            this.timer = timer;
-            mapSize = map.Size;
+            this.mapSize = mapSize;
+            mapImg = new Bitmap(mapSize.Width, mapSize.Height);
+            nextBrickImg = new Bitmap(nextBrickBoxSize.Width, nextBrickBoxSize.Height);
             var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
@@ -40,23 +47,13 @@ namespace Tetris
         {
             InitData();
             CreateBrick();
-            Paint();
+            PaintMap();
+            OnStart?.Invoke();
         }
 
         public void Stop()
         {
-            timer.Enabled = false;
-            var result = MessageBox.Show("Game Over");
-            if (result == DialogResult.OK)
-            {
-                Restart();
-            }
-        }
-
-        public void Restart()
-        {
-            Start();
-            timer.Enabled = true;
+            OnStop?.Invoke();
         }
 
         public void Update()
@@ -66,19 +63,30 @@ namespace Tetris
 
         public void CreateBrick()
         {
-            brick = new Brick(brickConfigs[random.Next(0, brickConfigs.Length)]);
+            if (nextBrick == null)
+            {
+                brick = new Brick(brickConfigs[random.Next(0, brickConfigs.Length)]);
+                nextBrick = new Brick(brickConfigs[random.Next(0, brickConfigs.Length)]);
+            }
+            else
+            {
+                brick = nextBrick;
+                nextBrick = new Brick(brickConfigs[random.Next(0, brickConfigs.Length)]);
+            }
+
+            PaintNextBrick();
         }
 
         public void MoveBrick(Direction direction)
         {
             brick.Move(direction);
-            Paint();
+            PaintMap();
         }
 
         public void RotateBrick()
         {
             brick.Rotate();
-            Paint();
+            PaintMap();
         }
 
         public void CombineBrick()
@@ -141,10 +149,10 @@ namespace Tetris
             }
         }
 
-        private void Paint()
+        private void PaintMap()
         {
-            var g = map.CreateGraphics();
-            g.Clear(Color.Black);
+            var g = Graphics.FromImage(mapImg);
+            g.Clear(Color.Transparent);
             brick.Paint(g);
 
             for (int i = 0, lenX = data.GetLength(0); i < lenX; i++)
@@ -157,6 +165,16 @@ namespace Tetris
                     }
                 }
             }
+
+            OnMapPaint?.Invoke(mapImg);
+        }
+
+        private void PaintNextBrick()
+        {
+            var g = Graphics.FromImage(nextBrickImg);
+            g.Clear(Color.Transparent);
+            nextBrick.Paint(g, new Point(50, 50), 0.5f);
+            OnNextBrickPaint?.Invoke(nextBrickImg);
         }
     }
 }

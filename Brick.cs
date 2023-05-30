@@ -6,7 +6,7 @@ namespace Tetris
 {
     internal class Brick
     {
-        public const int Size = 16;
+        public const int Size = 40;
         public const int Space = 2;
         public const int SizeWithSpace = Size + Space;
         private BrickData data;
@@ -35,9 +35,15 @@ namespace Tetris
 
         public void Paint(Graphics g)
         {
+            Paint(g, position, 1);
+        }
+
+        public void Paint(Graphics g, Point position, float scale)
+        {
             var containerState = g.BeginContainer();
 
             g.TranslateTransform(position.X, position.Y);
+            g.ScaleTransform(scale, scale);
 
             foreach (var item in data.layout)
             {

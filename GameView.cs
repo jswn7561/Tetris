@@ -1,8 +1,10 @@
+using Tetris.Properties;
+
 namespace Tetris
 {
-    public partial class HomeView : Form
+    public partial class GameView : Form
     {
-        public HomeView()
+        public GameView()
         {
             InitializeComponent();
             InitGame();
@@ -10,7 +12,12 @@ namespace Tetris
 
         private void InitGame()
         {
-            Game.Instance.Init(map, timer);
+            var game = Game.Instance;
+            game.Init(map.Size, nextBrickBox.Size);
+            game.OnStart += OnStartGame;
+            game.OnStop += OnStopGame;
+            game.OnMapPaint += OnMapPaint;
+            game.OnNextBrickPaint += OnNextBrickPaint;
         }
 
         private void StartGame(object sender, EventArgs e)
@@ -49,6 +56,31 @@ namespace Tetris
                 return false;
 
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void OnStartGame()
+        {
+            timer.Enabled = true;
+        }
+
+        private void OnStopGame()
+        {
+            timer.Enabled = false;
+            var result = MessageBox.Show("Game Over");
+            if (result == DialogResult.OK)
+            {
+                Game.Instance.Start();
+            }
+        }
+
+        private void OnMapPaint(Bitmap img)
+        {
+            map.Image = img;
+        }
+
+        private void OnNextBrickPaint(Bitmap img)
+        {
+            nextBrickBox.Image = img;
         }
     }
 }
