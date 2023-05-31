@@ -45,6 +45,7 @@
             BackColor = Color.FromArgb(235, 107, 0);
             ClientSize = new Size(592, 862);
             Controls.Add(content);
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainForm";

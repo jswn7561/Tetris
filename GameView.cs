@@ -38,30 +38,28 @@ namespace Tetris
             Game.Instance.Update();
         }
 
-        private void OnKeyDown(object sender, KeyEventArgs e)
-        {
-            var key = e.KeyData;
-            switch (key)
-            {
-                case Keys.Up:
-                    Game.Instance.RotateBrick();
-                    break;
-                case Keys.Down:
-                    Game.Instance.MoveBrick(Direction.Down);
-                    break;
-                case Keys.Left:
-                    Game.Instance.MoveBrick(Direction.Left);
-                    break;
-                case Keys.Right:
-                    Game.Instance.MoveBrick(Direction.Right);
-                    break;
-            }
-        }
-
         protected override bool ProcessDialogKey(Keys keyData)
         {
             if (keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right)
-                return false;
+            {
+                switch (keyData)
+                {
+                    case Keys.Up:
+                        Game.Instance.RotateBrick();
+                        break;
+                    case Keys.Down:
+                        Game.Instance.MoveBrick(Direction.Down);
+                        break;
+                    case Keys.Left:
+                        Game.Instance.MoveBrick(Direction.Left);
+                        break;
+                    case Keys.Right:
+                        Game.Instance.MoveBrick(Direction.Right);
+                        break;
+                }
+
+                return true;
+            }
 
             return base.ProcessDialogKey(keyData);
         }

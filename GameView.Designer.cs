@@ -208,7 +208,6 @@
             Margin = new Padding(0);
             Name = "GameView";
             Size = new Size(568, 838);
-            KeyDown += OnKeyDown;
             ((System.ComponentModel.ISupportInitialize)map).EndInit();
             rightBox.ResumeLayout(false);
             rightBox.PerformLayout();

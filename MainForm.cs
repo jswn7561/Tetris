@@ -35,9 +35,9 @@ namespace Tetris
 
         public void ShowGame()
         {
+            gameView.Show();
             homeView.Hide();
             gameView.StartGame();
-            gameView.Show();
         }
 
         private void OnLoad(object sender, EventArgs e)
