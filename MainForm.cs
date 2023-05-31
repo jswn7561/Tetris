@@ -14,8 +14,8 @@ namespace Tetris
     {
         private static MainForm instance;
         public static MainForm Instance => instance ??= new MainForm();
-        public HomeView homeView;
-        public GameView gameView;
+        private HomeView homeView;
+        private GameView gameView;
 
         public MainForm()
         {

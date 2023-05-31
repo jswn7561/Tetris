@@ -42,9 +42,11 @@
             level = new Label();
             levelTitle = new Label();
             timer = new System.Windows.Forms.Timer(components);
+            leftBox = new Panel();
             ((System.ComponentModel.ISupportInitialize)map).BeginInit();
             rightBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nextBrickBox).BeginInit();
+            leftBox.SuspendLayout();
             SuspendLayout();
             // 
             // map
@@ -197,13 +199,22 @@
             timer.Interval = 500;
             timer.Tick += UpdateGame;
             // 
+            // leftBox
+            // 
+            leftBox.BackColor = Color.IndianRed;
+            leftBox.Controls.Add(map);
+            leftBox.Location = new Point(0, 0);
+            leftBox.Name = "leftBox";
+            leftBox.Size = new Size(418, 838);
+            leftBox.TabIndex = 3;
+            // 
             // GameView
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
+            Controls.Add(leftBox);
             Controls.Add(rightBox);
-            Controls.Add(map);
             Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(0);
             Name = "GameView";
@@ -212,6 +223,7 @@
             rightBox.ResumeLayout(false);
             rightBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nextBrickBox).EndInit();
+            leftBox.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -230,5 +242,6 @@
         private Label levelTitle;
         private System.Windows.Forms.Timer timer;
         private SuperButton homeBtn;
+        private Panel leftBox;
     }
 }

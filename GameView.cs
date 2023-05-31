@@ -12,9 +12,13 @@ namespace Tetris
 {
     public partial class GameView : UserControl
     {
+        private GameOverView gameOverView;
+
         public GameView()
         {
             InitializeComponent();
+            gameOverView = new GameOverView();
+            leftBox.Controls.Add(gameOverView);
             InitGame();
         }
 
@@ -45,7 +49,7 @@ namespace Tetris
 
         protected override bool ProcessDialogKey(Keys keyData)
         {
-            if (keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right)
+            if (timer.Enabled && keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right)
             {
                 switch (keyData)
                 {
@@ -72,16 +76,15 @@ namespace Tetris
         private void OnStartGame()
         {
             timer.Enabled = true;
+            map.Show();
+            gameOverView.Hide();
         }
 
         private void OnStopGame()
         {
             timer.Enabled = false;
-            var result = MessageBox.Show("Game Over");
-            if (result == DialogResult.OK)
-            {
-                Game.Instance.Start();
-            }
+            gameOverView.Show();
+            map.Hide();
         }
 
         private void OnMapPaint(Bitmap img)
