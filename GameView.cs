@@ -38,6 +38,11 @@ namespace Tetris
             Game.Instance.Update();
         }
 
+        private void ShowHome(object sender, EventArgs e)
+        {
+            MainForm.Instance.ShowHome();
+        }
+
         protected override bool ProcessDialogKey(Keys keyData)
         {
             if (keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right)

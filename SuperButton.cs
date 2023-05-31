@@ -1,38 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System.ComponentModel;
+
 namespace Tetris
 {
     public partial class SuperButton : UserControl
     {
-        //public Image PressedBackgroundImage { get; set; }
-        //private Image originalBackgroundImage;
+        public Image PressedBackgroundImage { get; set; }
+
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Bindable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public override string Text
+        {
+            get => label.Text;
+            set => label.Text = value;
+        }
+
+        public override Color ForeColor
+        {
+            get => base.ForeColor;
+            set
+            {
+                base.ForeColor = value;
+                label.ForeColor = value;
+            }
+        }
+
+        private Image originalBackgroundImage;
 
         public SuperButton()
         {
+            MouseDown += OnMouseDown;
+            MouseUp += OnMouseUp;
+            SizeChanged += OnSizeChanged;
             InitializeComponent();
-            //MouseDown += OnMouseDown;
-            //MouseUp += OnMouseUp;
+            ControlUtils.SetControlEnabled(label, false);
         }
 
-        //private void OnMouseDown(object sender, MouseEventArgs e)
-        //{
-        //    if (BackgroundImage != null && PressedBackgroundImage != null)
-        //    {
-        //        originalBackgroundImage = BackgroundImage;
-        //        BackgroundImage = PressedBackgroundImage;
-        //    }
-        //}
+        private void OnSizeChanged(object sender, EventArgs e)
+        {
+            label.Size = Size;
+        }
 
-        //private void OnMouseUp(object sender, MouseEventArgs e)
-        //{
-        //    if (BackgroundImage != null && PressedBackgroundImage != null)
-        //    {
-        //        BackgroundImage = originalBackgroundImage;
-        //    }
-        //}
+        private void OnMouseDown(object sender, MouseEventArgs e)
+        {
+            if (BackgroundImage != null && PressedBackgroundImage != null)
+            {
+                originalBackgroundImage = BackgroundImage;
+                BackgroundImage = PressedBackgroundImage;
+            }
+
+            var color = label.ForeColor;
+            label.ForeColor = Color.FromArgb(color.A, (int)(color.R * 0.78f), (int)(color.G * 0.78f),
+                (int)(color.B * 0.78f));
+        }
+
+        private void OnMouseUp(object sender, MouseEventArgs e)
+        {
+            if (BackgroundImage != null && PressedBackgroundImage != null)
+            {
+                BackgroundImage = originalBackgroundImage;
+            }
+
+            label.ForeColor = base.ForeColor;
+        }
     }
 }

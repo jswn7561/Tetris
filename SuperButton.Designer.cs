@@ -38,7 +38,6 @@
             label.Name = "label";
             label.Size = new Size(80, 30);
             label.TabIndex = 0;
-            label.Text = "Button";
             label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SuperButton

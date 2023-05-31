@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            startBtn = new Button();
+            superButton1 = new SuperButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,31 +44,26 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // startBtn
+            // superButton1
             // 
-            startBtn.AutoSize = true;
-            startBtn.BackColor = Color.Transparent;
-            startBtn.FlatAppearance.BorderSize = 0;
-            startBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            startBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            startBtn.FlatStyle = FlatStyle.Flat;
-            startBtn.Font = new Font("Kleptocracy Titling Rg", 40F, FontStyle.Bold, GraphicsUnit.Point);
-            startBtn.ForeColor = Color.White;
-            startBtn.Location = new Point(210, 717);
-            startBtn.Margin = new Padding(4, 3, 4, 3);
-            startBtn.Name = "startBtn";
-            startBtn.Size = new Size(155, 75);
-            startBtn.TabIndex = 1;
-            startBtn.Text = "Start";
-            startBtn.UseVisualStyleBackColor = false;
-            startBtn.Click += StartGame;
+            superButton1.BackColor = Color.Transparent;
+            superButton1.Font = new Font("Kleptocracy Titling Rg", 40F, FontStyle.Bold, GraphicsUnit.Point);
+            superButton1.ForeColor = Color.White;
+            superButton1.Location = new Point(210, 717);
+            superButton1.Margin = new Padding(12, 10, 12, 10);
+            superButton1.Name = "superButton1";
+            superButton1.PressedBackgroundImage = null;
+            superButton1.Size = new Size(155, 75);
+            superButton1.TabIndex = 2;
+            superButton1.Text = "Start";
+            superButton1.Click += StartGame;
             // 
             // HomeView
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            Controls.Add(startBtn);
+            Controls.Add(superButton1);
             Controls.Add(pictureBox1);
             Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(0);
@@ -82,6 +77,6 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button startBtn;
+        private SuperButton superButton1;
     }
 }

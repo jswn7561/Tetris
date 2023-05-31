@@ -31,8 +31,8 @@
             components = new System.ComponentModel.Container();
             map = new PictureBox();
             rightBox = new Panel();
+            homeBtn = new SuperButton();
             nextBrickBox = new PictureBox();
-            homeBtn = new Button();
             label1 = new Label();
             score = new Label();
             scoreTitle = new Label();
@@ -60,8 +60,8 @@
             // rightBox
             // 
             rightBox.BackColor = Color.FromArgb(38, 12, 2);
-            rightBox.Controls.Add(nextBrickBox);
             rightBox.Controls.Add(homeBtn);
+            rightBox.Controls.Add(nextBrickBox);
             rightBox.Controls.Add(label1);
             rightBox.Controls.Add(score);
             rightBox.Controls.Add(scoreTitle);
@@ -77,6 +77,21 @@
             rightBox.Size = new Size(150, 838);
             rightBox.TabIndex = 2;
             // 
+            // homeBtn
+            // 
+            homeBtn.BackColor = Color.Transparent;
+            homeBtn.BackgroundImage = Properties.Resources.button_home;
+            homeBtn.BackgroundImageLayout = ImageLayout.Zoom;
+            homeBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            homeBtn.ForeColor = Color.Black;
+            homeBtn.Location = new Point(45, 761);
+            homeBtn.Margin = new Padding(4, 3, 4, 3);
+            homeBtn.Name = "homeBtn";
+            homeBtn.PressedBackgroundImage = Properties.Resources.button_home_pressed;
+            homeBtn.Size = new Size(60, 60);
+            homeBtn.TabIndex = 11;
+            homeBtn.Click += ShowHome;
+            // 
             // nextBrickBox
             // 
             nextBrickBox.BackColor = Color.FromArgb(81, 40, 19);
@@ -85,21 +100,6 @@
             nextBrickBox.Size = new Size(100, 100);
             nextBrickBox.TabIndex = 10;
             nextBrickBox.TabStop = false;
-            // 
-            // homeBtn
-            // 
-            homeBtn.BackColor = Color.Transparent;
-            homeBtn.BackgroundImage = Properties.Resources.button_home;
-            homeBtn.BackgroundImageLayout = ImageLayout.Zoom;
-            homeBtn.FlatAppearance.BorderSize = 0;
-            homeBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            homeBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            homeBtn.FlatStyle = FlatStyle.Flat;
-            homeBtn.Location = new Point(45, 761);
-            homeBtn.Name = "homeBtn";
-            homeBtn.Size = new Size(60, 60);
-            homeBtn.TabIndex = 9;
-            homeBtn.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -220,7 +220,6 @@
         private PictureBox map;
         private Panel rightBox;
         private PictureBox nextBrickBox;
-        private Button homeBtn;
         private Label label1;
         private Label score;
         private Label scoreTitle;
@@ -230,5 +229,6 @@
         private Label level;
         private Label levelTitle;
         private System.Windows.Forms.Timer timer;
+        private SuperButton homeBtn;
     }
 }

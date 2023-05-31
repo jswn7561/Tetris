@@ -313,6 +313,16 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap button_home_pressed {
+            get {
+                object obj = ResourceManager.GetObject("button_home_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap button_install {
             get {
                 object obj = ResourceManager.GetObject("button_install", resourceCulture);
