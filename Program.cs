@@ -10,12 +10,13 @@ namespace Tetris
         [STAThread]
         static void Main()
         {
+            AllocConsole();
             AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling rg.ttf");
             AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling bd.ttf");
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new GameView());
+            Application.Run(MainForm.Instance);
         }
 
         [DllImport("gdi32.dll", EntryPoint="AddFontResourceW", SetLastError=true)]

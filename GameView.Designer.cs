@@ -2,15 +2,15 @@
 {
     partial class GameView
     {
-        /// <summary>
-        ///  Required designer variable.
+        /// <summary> 
+        /// 必需的设计器变量。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
+        /// <summary> 
+        /// 清理所有正在使用的资源。
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,18 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region 组件设计器生成的代码
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// <summary> 
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
         /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
             map = new PictureBox();
-            timer = new System.Windows.Forms.Timer(components);
             rightBox = new Panel();
+            nextBrickBox = new PictureBox();
             homeBtn = new Button();
             label1 = new Label();
             score = new Label();
@@ -41,7 +41,7 @@
             goalTitle = new Label();
             level = new Label();
             levelTitle = new Label();
-            nextBrickBox = new PictureBox();
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)map).BeginInit();
             rightBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nextBrickBox).BeginInit();
@@ -50,18 +50,12 @@
             // map
             // 
             map.BackColor = Color.Black;
-            map.Location = new Point(12, 12);
-            map.Margin = new Padding(3, 2, 3, 2);
+            map.Location = new Point(0, 0);
+            map.Margin = new Padding(0);
             map.Name = "map";
             map.Size = new Size(418, 838);
-            map.TabIndex = 0;
+            map.TabIndex = 1;
             map.TabStop = false;
-            // 
-            // timer
-            // 
-            timer.Enabled = true;
-            timer.Interval = 500;
-            timer.Tick += UpdateGame;
             // 
             // rightBox
             // 
@@ -77,18 +71,26 @@
             rightBox.Controls.Add(level);
             rightBox.Controls.Add(levelTitle);
             rightBox.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            rightBox.Location = new Point(430, 12);
+            rightBox.Location = new Point(418, 0);
             rightBox.Margin = new Padding(3, 2, 3, 2);
             rightBox.Name = "rightBox";
             rightBox.Size = new Size(150, 838);
-            rightBox.TabIndex = 1;
+            rightBox.TabIndex = 2;
+            // 
+            // nextBrickBox
+            // 
+            nextBrickBox.BackColor = Color.FromArgb(81, 40, 19);
+            nextBrickBox.Location = new Point(25, 376);
+            nextBrickBox.Name = "nextBrickBox";
+            nextBrickBox.Size = new Size(100, 100);
+            nextBrickBox.TabIndex = 10;
+            nextBrickBox.TabStop = false;
             // 
             // homeBtn
             // 
             homeBtn.BackColor = Color.Transparent;
             homeBtn.BackgroundImage = Properties.Resources.button_home;
             homeBtn.BackgroundImageLayout = ImageLayout.Zoom;
-            homeBtn.Enabled = false;
             homeBtn.FlatAppearance.BorderSize = 0;
             homeBtn.FlatAppearance.MouseDownBackColor = Color.Transparent;
             homeBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -190,30 +192,22 @@
             levelTitle.TabIndex = 0;
             levelTitle.Text = "LEVEL";
             // 
-            // nextBrickBox
+            // timer
             // 
-            nextBrickBox.BackColor = Color.FromArgb(81, 40, 19);
-            nextBrickBox.Location = new Point(25, 376);
-            nextBrickBox.Name = "nextBrickBox";
-            nextBrickBox.Size = new Size(100, 100);
-            nextBrickBox.TabIndex = 10;
-            nextBrickBox.TabStop = false;
+            timer.Interval = 500;
+            timer.Tick += UpdateGame;
             // 
             // GameView
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(235, 107, 0);
-            ClientSize = new Size(592, 862);
+            BackColor = Color.Black;
             Controls.Add(rightBox);
             Controls.Add(map);
-            DoubleBuffered = true;
-            Margin = new Padding(3, 2, 3, 2);
-            MaximizeBox = false;
-            MinimizeBox = false;
+            Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Margin = new Padding(0);
             Name = "GameView";
-            Text = "俄罗斯方块";
-            Load += StartGame;
+            Size = new Size(568, 838);
             KeyDown += OnKeyDown;
             ((System.ComponentModel.ISupportInitialize)map).EndInit();
             rightBox.ResumeLayout(false);
@@ -225,17 +219,17 @@
         #endregion
 
         private PictureBox map;
-        private System.Windows.Forms.Timer timer;
         private Panel rightBox;
-        private Label levelTitle;
-        private Label level;
-        private Label goalProgressBar;
-        private Label goalTitle;
-        private Label goalProgress;
+        private PictureBox nextBrickBox;
+        private Button homeBtn;
+        private Label label1;
         private Label score;
         private Label scoreTitle;
-        private Label label1;
-        private Button homeBtn;
-        private PictureBox nextBrickBox;
+        private Label goalProgress;
+        private Label goalProgressBar;
+        private Label goalTitle;
+        private Label level;
+        private Label levelTitle;
+        private System.Windows.Forms.Timer timer;
     }
 }

@@ -1,8 +1,16 @@
-using Tetris.Properties;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tetris
 {
-    public partial class GameView : Form
+    public partial class GameView : UserControl
     {
         public GameView()
         {
@@ -20,7 +28,7 @@ namespace Tetris
             game.OnNextBrickPaint += OnNextBrickPaint;
         }
 
-        private void StartGame(object sender, EventArgs e)
+        public void StartGame()
         {
             Game.Instance.Start();
         }
