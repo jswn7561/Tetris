@@ -36,7 +36,7 @@
             // title
             // 
             title.Image = Properties.Resources.text_gameover;
-            title.Location = new Point(24, 132);
+            title.Location = new Point(33, 130);
             title.Margin = new Padding(2);
             title.Name = "title";
             title.Size = new Size(347, 82);
