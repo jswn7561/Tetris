@@ -543,9 +543,29 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap difficulty_select_left_pressed {
+            get {
+                object obj = ResourceManager.GetObject("difficulty_select_left_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap difficulty_select_right {
             get {
                 object obj = ResourceManager.GetObject("difficulty_select_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap difficulty_select_right_pressed {
+            get {
+                object obj = ResourceManager.GetObject("difficulty_select_right_pressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -85,12 +85,12 @@
             pbarGoal.Location = new Point(26, 154);
             pbarGoal.Margin = new Padding(3, 2, 3, 2);
             pbarGoal.Name = "pbarGoal";
-            pbarGoal.pBackgroundColor = Color.FromArgb(0, 0, 0);
-            pbarGoal.pForegroundColor = Color.FromArgb(118, 186, 0);
+            pbarGoal.PBackgroundColor = Color.FromArgb(0, 0, 0);
+            pbarGoal.PForegroundColor = Color.FromArgb(118, 186, 0);
             pbarGoal.Size = new Size(100, 40);
             pbarGoal.TabIndex = 100;
             pbarGoal.TabStop = false;
-            pbarGoal.Val = 30;
+            pbarGoal.Value = 0;
             // 
             // homeBtn
             // 

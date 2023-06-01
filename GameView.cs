@@ -102,11 +102,11 @@ namespace Tetris
         private void OnMsgUpdate()
         {
             var game = Game.Instance;
-            level.Text = game.Level.ToString();
-            score.Text = game.Score.ToString();
-            timer.Interval = game.Interval;
+            level.Text = game.level.ToString();
+            score.Text = game.score.ToString();
+            timer.Interval = game.interval;
 
-            pbarGoal.Val = (int)(pbarGoal.TabIndex * game.GoalRatio);
+            pbarGoal.Value = (int)(pbarGoal.TabIndex * game.goalRatio);
         }
     }
 }

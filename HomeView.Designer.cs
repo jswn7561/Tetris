@@ -80,28 +80,28 @@
             btnDifficultSelectRight.BackgroundImage = Properties.Resources.difficulty_select_right;
             btnDifficultSelectRight.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectRight.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectRight.Location = new Point(347, 510);
+            btnDifficultSelectRight.Location = new Point(362, 510);
             btnDifficultSelectRight.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectRight.Name = "btnDifficultSelectRight";
-            btnDifficultSelectRight.PressedBackgroundImage = null;
+            btnDifficultSelectRight.PressedBackgroundImage = Properties.Resources.difficulty_select_right_pressed;
             btnDifficultSelectRight.RightToLeft = RightToLeft.No;
             btnDifficultSelectRight.Size = new Size(20, 43);
             btnDifficultSelectRight.TabIndex = 4;
-            btnDifficultSelectRight.Click += levelAdd;
+            btnDifficultSelectRight.Click += AddDifficult;
             // 
             // btnDifficultSelectLeft
             // 
             btnDifficultSelectLeft.BackgroundImage = Properties.Resources.difficulty_select_left;
             btnDifficultSelectLeft.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectLeft.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectLeft.Location = new Point(201, 510);
+            btnDifficultSelectLeft.Location = new Point(186, 510);
             btnDifficultSelectLeft.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectLeft.Name = "btnDifficultSelectLeft";
-            btnDifficultSelectLeft.PressedBackgroundImage = null;
+            btnDifficultSelectLeft.PressedBackgroundImage = Properties.Resources.difficulty_select_left_pressed;
             btnDifficultSelectLeft.RightToLeft = RightToLeft.No;
             btnDifficultSelectLeft.Size = new Size(20, 43);
             btnDifficultSelectLeft.TabIndex = 5;
-            btnDifficultSelectLeft.Click += LevelSub;
+            btnDifficultSelectLeft.Click += SubDifficult;
             // 
             // pbxLevel
             // 

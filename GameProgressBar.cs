@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,8 @@ namespace Tetris
     public partial class GameProgressBar : UserControl
     {
         private int val;//进度值
-        private Color PBackgroundColor = Color.FromArgb(0, 0, 0);//初始化颜色
-        private Color PForegroundColor = Color.FromArgb(118, 186, 0);
+        private Color pBackgroundColor = Color.FromArgb(0, 0, 0);//初始化颜色
+        private Color pForegroundColor = Color.FromArgb(118, 186, 0);
         public GameProgressBar()
         {
             InitializeComponent();
@@ -23,36 +24,36 @@ namespace Tetris
         /// <summary>
         /// 背景色
         /// </summary>
-        public Color pBackgroundColor
+        public Color PBackgroundColor
         {
             get
             {
-                return PBackgroundColor;
+                return pBackgroundColor;
             }
             set
             {
-                PBackgroundColor = value;
-                this.BackColor = PBackgroundColor;
+                pBackgroundColor = value;
+                this.BackColor = pBackgroundColor;
             }
         }
         /// <summary>
         /// 前景色
         /// </summary>
-        public Color pForegroundColor
+        public Color PForegroundColor
         {
             get
             {
-                return PForegroundColor;
+                return pForegroundColor;
             }
             set
             {
-                PForegroundColor = value;
+                pForegroundColor = value;
             }
         }
         /// <summary>
         /// 当前值
         /// </summary>
-        public int Val
+        public int Value
         {
             get
             {
@@ -67,7 +68,7 @@ namespace Tetris
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            SolidBrush brush = new SolidBrush(PForegroundColor);
+            SolidBrush brush = new SolidBrush(pForegroundColor);
             float percent = val / 100f;
             Rectangle rect = this.ClientRectangle;
             rect.Width = (int)((float)rect.Width * percent);

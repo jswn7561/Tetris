@@ -23,22 +23,22 @@ namespace Tetris
             MainForm.Instance.ShowGame();
         }
 
-        private void levelAdd(object sender, EventArgs e)
+        private void AddDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
             game.AddLevel();
-            SelectLevelPic(game.Level);
+            SelectDifficultPic(game.difficuleLevel);
         }
-        private void LevelSub(object sender, EventArgs e)
+        private void SubDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
             game.SubLevel();
-            SelectLevelPic(game.Level);
+            SelectDifficultPic(game.difficuleLevel);
         }
 
-        private void SelectLevelPic(int level)
+        private void SelectDifficultPic(int difficuleLevel)
         {
-            string imgName = string.Format("level{0:d2}", level - 1);
+            string imgName = string.Format("level{0:d2}", difficuleLevel - 1);
             object bitmap = Properties.Resources.ResourceManager.GetObject(imgName, Properties.Resources.Culture);
             pbxLevel.Image = (Bitmap)bitmap;
         }
