@@ -30,11 +30,13 @@ namespace Tetris
             game.OnStop += OnStopGame;
             game.OnMapPaint += OnMapPaint;
             game.OnNextBrickPaint += OnNextBrickPaint;
+            game.OnMsgUpdate += OnMsgUpdate;
         }
 
         public void StartGame()
         {
             Game.Instance.Start();
+            OnMsgUpdate();
         }
 
         private void UpdateGame(object sender, EventArgs e)
@@ -95,6 +97,16 @@ namespace Tetris
         private void OnNextBrickPaint(Bitmap img)
         {
             nextBrickBox.Image = img;
+        }
+
+        private void OnMsgUpdate()
+        {
+            var game = Game.Instance;
+            level.Text = game.Level.ToString();
+            score.Text = game.Score.ToString();
+            timer.Interval = game.Interval;
+
+            pbarGoal.Val = (int)(pbarGoal.TabIndex * game.GoalRatio);
         }
     }
 }

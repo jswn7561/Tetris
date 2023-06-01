@@ -31,13 +31,12 @@
             components = new System.ComponentModel.Container();
             map = new PictureBox();
             rightBox = new Panel();
+            pbarGoal = new GameProgressBar();
             homeBtn = new SuperButton();
             nextBrickBox = new PictureBox();
             label1 = new Label();
             score = new Label();
             scoreTitle = new Label();
-            goalProgress = new Label();
-            goalProgressBar = new Label();
             goalTitle = new Label();
             level = new Label();
             levelTitle = new Label();
@@ -62,13 +61,12 @@
             // rightBox
             // 
             rightBox.BackColor = Color.FromArgb(38, 12, 2);
+            rightBox.Controls.Add(pbarGoal);
             rightBox.Controls.Add(homeBtn);
             rightBox.Controls.Add(nextBrickBox);
             rightBox.Controls.Add(label1);
             rightBox.Controls.Add(score);
             rightBox.Controls.Add(scoreTitle);
-            rightBox.Controls.Add(goalProgress);
-            rightBox.Controls.Add(goalProgressBar);
             rightBox.Controls.Add(goalTitle);
             rightBox.Controls.Add(level);
             rightBox.Controls.Add(levelTitle);
@@ -78,6 +76,21 @@
             rightBox.Name = "rightBox";
             rightBox.Size = new Size(150, 838);
             rightBox.TabIndex = 2;
+            // 
+            // pbarGoal
+            // 
+            pbarGoal.BackColor = Color.FromArgb(0, 0, 0);
+            pbarGoal.CausesValidation = false;
+            pbarGoal.ForeColor = Color.Lime;
+            pbarGoal.Location = new Point(26, 154);
+            pbarGoal.Margin = new Padding(3, 2, 3, 2);
+            pbarGoal.Name = "pbarGoal";
+            pbarGoal.pBackgroundColor = Color.FromArgb(0, 0, 0);
+            pbarGoal.pForegroundColor = Color.FromArgb(118, 186, 0);
+            pbarGoal.Size = new Size(100, 40);
+            pbarGoal.TabIndex = 100;
+            pbarGoal.TabStop = false;
+            pbarGoal.Val = 30;
             // 
             // homeBtn
             // 
@@ -138,28 +151,6 @@
             scoreTitle.TabIndex = 5;
             scoreTitle.Text = "SCORE";
             // 
-            // goalProgress
-            // 
-            goalProgress.BackColor = Color.FromArgb(118, 186, 0);
-            goalProgress.Font = new Font("Kleptocracy Titling Rg", 22F, FontStyle.Bold, GraphicsUnit.Point);
-            goalProgress.ForeColor = Color.White;
-            goalProgress.Location = new Point(25, 152);
-            goalProgress.Name = "goalProgress";
-            goalProgress.Size = new Size(48, 40);
-            goalProgress.TabIndex = 4;
-            goalProgress.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // goalProgressBar
-            // 
-            goalProgressBar.BackColor = Color.Black;
-            goalProgressBar.Font = new Font("Kleptocracy Titling Rg", 22F, FontStyle.Bold, GraphicsUnit.Point);
-            goalProgressBar.ForeColor = Color.White;
-            goalProgressBar.Location = new Point(25, 152);
-            goalProgressBar.Name = "goalProgressBar";
-            goalProgressBar.Size = new Size(100, 40);
-            goalProgressBar.TabIndex = 3;
-            goalProgressBar.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // goalTitle
             // 
             goalTitle.AutoSize = true;
@@ -196,7 +187,7 @@
             // 
             // timer
             // 
-            timer.Interval = 500;
+            timer.Interval = 1000;
             timer.Tick += UpdateGame;
             // 
             // leftBox
@@ -235,13 +226,12 @@
         private Label label1;
         private Label score;
         private Label scoreTitle;
-        private Label goalProgress;
-        private Label goalProgressBar;
         private Label goalTitle;
         private Label level;
         private Label levelTitle;
         private System.Windows.Forms.Timer timer;
         private SuperButton homeBtn;
         private Panel leftBox;
+        private GameProgressBar pbarGoal;
     }
 }

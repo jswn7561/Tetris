@@ -118,379 +118,391 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="black_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\black_screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="black_screen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\black_screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="block_brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\block_brick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="board" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="border" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="border_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\border 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_blue00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_blue00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_blue01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_blue01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_blue02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_blue02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_green00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_green00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_pink00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_pink00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\brick_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_back_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_back_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_back_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button-back_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_down01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_down01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_FB_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_FB_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_install" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_install.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_later" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_later.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_leaderboard_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_leaderboard_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_main_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_main_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_mode00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_mode00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_mode01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_mode01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_mode_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_mode_selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_moregames" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_moregames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_music_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_music_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_music_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_music_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_replay_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_replay_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_rotate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_rotate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_sound_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_sound_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\button_sound_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\dialog_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog_quitgame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\dialog_quitgame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="difficulty_select" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\difficulty_select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="featureimg_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\featureimg_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="free_ruby_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\free_ruby_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="install_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\install_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="in_corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\in_corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kleptocracy_titling_bd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Font\kleptocracy titling bd.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="kleptocracy_titling_rg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Font\kleptocracy titling rg.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="level00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level_current" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level_current.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="level_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level_locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="level_progress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\level_progress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="level_solved" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\level_solved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="level01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="light_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\light_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kleptocracy_titling_bd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Font\kleptocracy titling bd.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="out_corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\out_corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="play_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\play_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="point_back_gameover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\point_back_gameover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="price" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\price.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="quit_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\quit_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="remove_ads" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\remove_ads.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="right_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\right_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ruby_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\ruby_bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ruby_box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\ruby_box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ruby_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\ruby_chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ruby_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\ruby_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="side_above" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\side_above.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="side_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\side_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star00" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="starlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\starlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\star_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_completed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_completed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_gameover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_gameover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_select_difficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_select_difficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_time_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\text_time_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UIMask" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\UIMask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UISprite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\UISprite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="star02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_blue01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_blue01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\starlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="install_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\install_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kleptocracy_titling_rg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Font\kleptocracy titling rg.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="level09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="block_brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\block_brick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_mode_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_mode_selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_green00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_green00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UIMask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\UIMask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_select_difficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_select_difficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_back_gameover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\point_back_gameover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_pink00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_pink00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_screen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\black_screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="price" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\price.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_later" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_later.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_blue02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_blue02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_sound_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_time_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_time_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_music_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_music_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_rotate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_rotate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\play_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_blue00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_blue00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="UnitySplash_cube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\UnitySplash-cube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xbrick_title_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\xbrick_title_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="score_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Sprite\score_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_moregames" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_moregames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BrickConfigs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BrickConfigs.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="right_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\right_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="side_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\side_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_main_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_main_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_home_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\button_home_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="brick_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quit_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\quit_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\texture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_mode01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_mode01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="border_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\border 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby_box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\ruby_box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="out_corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\out_corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\ruby_chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\light_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_replay_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_replay_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_install" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_install.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\ruby.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_gameover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_gameover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BrickConfigs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BrickConfigs.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="score_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\score_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\black_screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level_current" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level_current.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="featureimg_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\featureimg_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_mode00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_mode00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove_ads" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\remove_ads.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\ruby_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_music_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_music_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_back_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button-back_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_mode00_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Sprite\button_mode00_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level_locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_back_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_back_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="side_above" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\side_above.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="board" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xbrick_title_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\xbrick_title_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog_quitgame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\dialog_quitgame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\brick_preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\dialog_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="in_corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\in_corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_sound_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_sound_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_down01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_down01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_completed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_completed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_FB_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_FB_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ruby_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\ruby_bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free_ruby_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\free_ruby_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\text_shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_leaderboard_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button_leaderboard_large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="level_solved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\level_solved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\star_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="border 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\border 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button-back_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\button-back_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficulty_select_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\difficulty_select_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficulty_select_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\difficulty_select_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UnitySplash-cube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Sprite\UnitySplash-cube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

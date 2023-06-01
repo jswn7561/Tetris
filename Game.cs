@@ -16,16 +16,23 @@ namespace Tetris
         public Size mapSize { get; private set; }
         public Brick brick { get; private set; }
         public Brick nextBrick { get; private set; }
+        public int Level { get => levelControl.Level; set => levelControl.Level = value; }
+        public int Score { get => levelControl.Score; }
+        public int Line { get => levelControl.Line; }
+        public int Interval { get => levelControl.Interval; }
+        public float GoalRatio { get => levelControl.GoalRatio; }
         public bool[,] data { get; private set; }
         public event Action<Bitmap> OnMapPaint;
         public event Action<Bitmap> OnNextBrickPaint;
         public event Action OnStart;
         public event Action OnStop;
+        public event Action OnMsgUpdate;
 
         private BrickData[] brickConfigs;
         private Random random;
         private Bitmap mapImg;
         private Bitmap nextBrickImg;
+        private LevelControl levelControl = new LevelControl();
 
         public void Init(Size mapSize, Size nextBrickBoxSize)
         {
@@ -45,6 +52,7 @@ namespace Tetris
 
         public void Start()
         {
+            levelControl.Init();
             InitData();
             CreateBrick();
             PaintMap();
@@ -148,6 +156,9 @@ namespace Tetris
                     data[i, j] = false;
                 }
             }
+            // 更新分数等级
+            levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
+            OnMsgUpdate?.Invoke();
         }
 
         private void PaintMap()
@@ -184,6 +195,23 @@ namespace Tetris
             g.Clear(Color.Transparent);
             nextBrick.Paint(g, origin.X, origin.Y, scale);
             OnNextBrickPaint?.Invoke(nextBrickImg);
+        }
+
+        public void AddLevel()
+        {
+            if (levelControl.Level >= 16)
+            {
+                return;
+            }
+            levelControl.Level++;
+        }
+        public void SubLevel()
+        {
+            if (levelControl.Level <= 1)
+            {
+                return;
+            }
+            levelControl.Level--;
         }
     }
 }

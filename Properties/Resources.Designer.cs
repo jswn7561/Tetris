@@ -133,16 +133,6 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap border_1 {
-            get {
-                object obj = ResourceManager.GetObject("border_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap brick_blue00 {
             get {
                 object obj = ResourceManager.GetObject("brick_blue00", resourceCulture);
@@ -246,16 +236,6 @@ namespace Tetris.Properties {
         internal static System.Drawing.Bitmap button_back_large {
             get {
                 object obj = ResourceManager.GetObject("button_back_large", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap button_back_small {
-            get {
-                object obj = ResourceManager.GetObject("button_back_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,9 +533,19 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap difficulty_select {
+        internal static System.Drawing.Bitmap difficulty_select_left {
             get {
-                object obj = ResourceManager.GetObject("difficulty_select", resourceCulture);
+                object obj = ResourceManager.GetObject("difficulty_select_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap difficulty_select_right {
+            get {
+                object obj = ResourceManager.GetObject("difficulty_select_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1286,16 +1276,6 @@ namespace Tetris.Properties {
         internal static System.Drawing.Bitmap UISprite {
             get {
                 object obj = ResourceManager.GetObject("UISprite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap UnitySplash_cube {
-            get {
-                object obj = ResourceManager.GetObject("UnitySplash_cube", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

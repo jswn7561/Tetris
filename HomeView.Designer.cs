@@ -30,7 +30,12 @@
         {
             pictureBox1 = new PictureBox();
             superButton1 = new SuperButton();
+            selectDifficult = new Label();
+            btnDifficultSelectRight = new SuperButton();
+            btnDifficultSelectLeft = new SuperButton();
+            pbxLevel = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxLevel).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -58,11 +63,65 @@
             superButton1.Text = "Start";
             superButton1.Click += StartGame;
             // 
+            // selectDifficult
+            // 
+            selectDifficult.AutoSize = true;
+            selectDifficult.Font = new Font("Kleptocracy Titling Rg", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            selectDifficult.ForeColor = Color.White;
+            selectDifficult.Location = new Point(186, 425);
+            selectDifficult.Name = "selectDifficult";
+            selectDifficult.Size = new Size(196, 33);
+            selectDifficult.TabIndex = 3;
+            selectDifficult.Text = "SELECT DIFFUCULT";
+            selectDifficult.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnDifficultSelectRight
+            // 
+            btnDifficultSelectRight.BackgroundImage = Properties.Resources.difficulty_select_right;
+            btnDifficultSelectRight.BackgroundImageLayout = ImageLayout.Center;
+            btnDifficultSelectRight.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDifficultSelectRight.Location = new Point(347, 510);
+            btnDifficultSelectRight.Margin = new Padding(3, 2, 3, 2);
+            btnDifficultSelectRight.Name = "btnDifficultSelectRight";
+            btnDifficultSelectRight.PressedBackgroundImage = null;
+            btnDifficultSelectRight.RightToLeft = RightToLeft.No;
+            btnDifficultSelectRight.Size = new Size(20, 43);
+            btnDifficultSelectRight.TabIndex = 4;
+            btnDifficultSelectRight.Click += levelAdd;
+            // 
+            // btnDifficultSelectLeft
+            // 
+            btnDifficultSelectLeft.BackgroundImage = Properties.Resources.difficulty_select_left;
+            btnDifficultSelectLeft.BackgroundImageLayout = ImageLayout.Center;
+            btnDifficultSelectLeft.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDifficultSelectLeft.Location = new Point(201, 510);
+            btnDifficultSelectLeft.Margin = new Padding(3, 2, 3, 2);
+            btnDifficultSelectLeft.Name = "btnDifficultSelectLeft";
+            btnDifficultSelectLeft.PressedBackgroundImage = null;
+            btnDifficultSelectLeft.RightToLeft = RightToLeft.No;
+            btnDifficultSelectLeft.Size = new Size(20, 43);
+            btnDifficultSelectLeft.TabIndex = 5;
+            btnDifficultSelectLeft.Click += LevelSub;
+            // 
+            // pbxLevel
+            // 
+            pbxLevel.BackgroundImage = Properties.Resources.level00;
+            pbxLevel.BackgroundImageLayout = ImageLayout.Center;
+            pbxLevel.Location = new Point(227, 473);
+            pbxLevel.Name = "pbxLevel";
+            pbxLevel.Size = new Size(114, 116);
+            pbxLevel.TabIndex = 6;
+            pbxLevel.TabStop = false;
+            // 
             // HomeView
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
+            Controls.Add(pbxLevel);
+            Controls.Add(btnDifficultSelectLeft);
+            Controls.Add(btnDifficultSelectRight);
+            Controls.Add(selectDifficult);
             Controls.Add(superButton1);
             Controls.Add(pictureBox1);
             Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -70,6 +129,7 @@
             Name = "HomeView";
             Size = new Size(568, 838);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxLevel).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -78,5 +138,9 @@
 
         private PictureBox pictureBox1;
         private SuperButton superButton1;
+        private Label selectDifficult;
+        private SuperButton btnDifficultSelectRight;
+        private SuperButton btnDifficultSelectLeft;
+        private PictureBox pbxLevel;
     }
 }
