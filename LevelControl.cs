@@ -9,10 +9,10 @@ namespace Tetris
 {
     internal class LevelControl
     {
-        private int baseLine = 10;
-        private int upLine = 2;
-        private int curLevelLine = 0;       // 当前等级消除的行数
-        private int nextLevelLine = 0;      // 达到等级需要再消除的行数
+        private int baseScore = 10;
+        private int upScore = 5;
+        private int curLevelScore = 0;
+        private int nextLevelScore = 0;
         public int score { get; private set; }
         public int line { get; private set; }
         public int level { get; private set; }
@@ -39,8 +39,8 @@ namespace Tetris
             {
                 interval = 200;
             }
-            curLevelLine = 0;
-            nextLevelLine = baseLine + upLine * (level - 1);
+            curLevelScore = 0;
+            nextLevelScore = baseScore + upScore * (level - 1);
         }
         /// <summary>
         /// 更新分数、等级、下落速度
@@ -65,12 +65,12 @@ namespace Tetris
                 score += 8;
             }
             line += clearLineNum;
-            // 按照消除行数计算等级
-            if (line >= curLevelLine + nextLevelLine)
+            // 按照分数计算等级
+            if (score >= curLevelScore + nextLevelScore)
             {
                 level++;
-                curLevelLine += nextLevelLine;
-                nextLevelLine = baseLine + upLine * (level - 1);
+                curLevelScore += nextLevelScore;
+                nextLevelScore = baseScore + upScore * (level - 1);
                 // 更新下落速度
                 if (interval > 500)
                 {
@@ -85,7 +85,7 @@ namespace Tetris
                     interval /= 2;
                 }
             }
-            goalRatio = (float)(line - curLevelLine) / nextLevelLine;
+            goalRatio = (float)(score - curLevelScore) / nextLevelScore;
         }
     }
 }
