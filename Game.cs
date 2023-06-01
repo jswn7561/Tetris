@@ -16,11 +16,12 @@ namespace Tetris
         public Size mapSize { get; private set; }
         public Brick brick { get; private set; }
         public Brick nextBrick { get; private set; }
-        public int Level { get => levelControl.Level; set => levelControl.Level = value; }
-        public int Score { get => levelControl.Score; }
-        public int Line { get => levelControl.Line; }
-        public int Interval { get => levelControl.Interval; }
-        public float GoalRatio { get => levelControl.GoalRatio; }
+        public int difficuleLevel { get; private set; }
+        public int level { get => levelControl.level; }
+        public int score { get => levelControl.score; }
+        public int line { get => levelControl.line; }
+        public int interval { get => levelControl.interval; }
+        public float goalRatio { get => levelControl.goalRatio; }
         public bool[,] data { get; private set; }
         public event Action<Bitmap> OnMapPaint;
         public event Action<Bitmap> OnNextBrickPaint;
@@ -42,6 +43,7 @@ namespace Tetris
             var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
+            difficuleLevel = 1;
         }
 
         private void InitData()
@@ -52,7 +54,7 @@ namespace Tetris
 
         public void Start()
         {
-            levelControl.Init();
+            levelControl.Init(difficuleLevel);
             InitData();
             CreateBrick();
             PaintMap();
@@ -199,19 +201,19 @@ namespace Tetris
 
         public void AddLevel()
         {
-            if (levelControl.Level >= 16)
+            if (difficuleLevel >= 3)
             {
                 return;
             }
-            levelControl.Level++;
+            difficuleLevel++;
         }
         public void SubLevel()
         {
-            if (levelControl.Level <= 1)
+            if (difficuleLevel <= 1)
             {
                 return;
             }
-            levelControl.Level--;
+            difficuleLevel--;
         }
     }
 }

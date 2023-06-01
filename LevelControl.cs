@@ -9,46 +9,38 @@ namespace Tetris
 {
     internal class LevelControl
     {
-        private int scoreNum = 0;
-        private int lineNum = 0;            // 已经消除的行数
-        private int levelNum = 1;
         private int baseLine = 10;
         private int upLine = 2;
         private int curLevelLine = 0;       // 当前等级消除的行数
         private int nextLevelLine = 0;      // 达到等级需要再消除的行数
-        private float goalRatio = 0;
-        public int Score { get => scoreNum; }
-        public int Line { get => lineNum; }
-        public int Level { get => levelNum; set => levelNum = value; }
-        public int Interval { get => LevelIntervalTable[levelNum]; }
-        public float GoalRatio { get => goalRatio; }
-        private readonly Dictionary<int, int> LevelIntervalTable = new Dictionary<int, int>() {
-            {1, 1000},
-            {2, 900},
-            {3, 800},
-            {4, 700},
-            {5, 600},
-            {6, 500},
-            {7, 400},
-            {8, 300},
-            {9, 200},
-            {10, 150},
-            {11, 100},
-            {12, 90},
-            {13, 80},
-            {14, 70},
-            {15, 60},
-            {16, 50}
-        };
+        public int score { get; private set; }
+        public int line { get; private set; }
+        public int level { get; private set; }
+        public int interval { get; private set; }
+        public float goalRatio { get; private set; }
         public LevelControl()
         {
         }
-        public void Init()
+        public void Init(int difficultLevel)
         {
-            scoreNum = 0;
-            lineNum = 0;
+            score = 0;
+            line = 0;
+            level = 1;
             goalRatio = 0;
-            nextLevelLine = baseLine + upLine * (levelNum - 1);
+            if (difficultLevel == 1)
+            {
+                interval = 1000;
+            }
+            else if (difficultLevel == 2)
+            {
+                interval = 500;
+            }
+            else
+            {
+                interval = 200;
+            }
+            curLevelLine = 0;
+            nextLevelLine = baseLine + upLine * (level - 1);
         }
         /// <summary>
         /// 更新分数、等级、下落速度
@@ -58,29 +50,42 @@ namespace Tetris
         {
             if (clearLineNum == 1)
             {
-                scoreNum += 1;
+                score += 1;
             }
             else if (clearLineNum == 2)
             {
-                scoreNum += 3;
+                score += 3;
             }
             else if (clearLineNum == 3)
             {
-                scoreNum += 5;
+                score += 5;
             }
             else
             {
-                scoreNum += 8;
+                score += 8;
             }
-            lineNum += clearLineNum;
+            line += clearLineNum;
             // 按照消除行数计算等级
-            if (lineNum  >= curLevelLine + nextLevelLine)
+            if (line >= curLevelLine + nextLevelLine)
             {
-                levelNum++;
+                level++;
                 curLevelLine += nextLevelLine;
-                nextLevelLine = baseLine + upLine * (levelNum - 1);
+                nextLevelLine = baseLine + upLine * (level - 1);
+                // 更新下落速度
+                if (interval > 500)
+                {
+                    interval -= 100;
+                }
+                else if (interval > 200 && interval <= 500)
+                {
+                    interval -= 50;
+                }
+                else
+                {
+                    interval /= 2;
+                }
             }
-            goalRatio = (float)(lineNum - curLevelLine) / nextLevelLine;
+            goalRatio = (float)(line - curLevelLine) / nextLevelLine;
         }
     }
 }
