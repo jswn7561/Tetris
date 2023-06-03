@@ -13,6 +13,7 @@ namespace Tetris
 {
     public partial class HomeView : UserControl
     {
+        Game game = Game.Instance;
         public HomeView()
         {
             InitializeComponent();
@@ -20,7 +21,15 @@ namespace Tetris
 
         private void StartGame(object sender, EventArgs e)
         {
-            MainForm.Instance.ShowGame();
+            if (nameTextBox.Text == "")
+            {
+                tipLabel.Text = "是哪位高手，请报上名来！";
+            }
+            else
+            {
+                game.SetName(nameTextBox.Text);
+                MainForm.Instance.ShowGame();
+            }
         }
 
         private void AddDifficult(object sender, EventArgs e)

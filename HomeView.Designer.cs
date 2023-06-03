@@ -34,6 +34,8 @@
             btnDifficultSelectRight = new SuperButton();
             btnDifficultSelectLeft = new SuperButton();
             pbxLevel = new PictureBox();
+            nameTextBox = new TextBox();
+            tipLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxLevel).BeginInit();
             SuspendLayout();
@@ -54,7 +56,7 @@
             superButton1.BackColor = Color.Transparent;
             superButton1.Font = new Font("Kleptocracy Titling Rg", 40F, FontStyle.Bold, GraphicsUnit.Point);
             superButton1.ForeColor = Color.White;
-            superButton1.Location = new Point(210, 717);
+            superButton1.Location = new Point(206, 692);
             superButton1.Margin = new Padding(12, 10, 12, 10);
             superButton1.Name = "superButton1";
             superButton1.PressedBackgroundImage = null;
@@ -68,9 +70,9 @@
             selectDifficult.AutoSize = true;
             selectDifficult.Font = new Font("Kleptocracy Titling Rg", 20F, FontStyle.Bold, GraphicsUnit.Point);
             selectDifficult.ForeColor = Color.White;
-            selectDifficult.Location = new Point(186, 425);
+            selectDifficult.Location = new Point(165, 450);
             selectDifficult.Name = "selectDifficult";
-            selectDifficult.Size = new Size(196, 33);
+            selectDifficult.Size = new Size(243, 41);
             selectDifficult.TabIndex = 3;
             selectDifficult.Text = "SELECT DIFFUCULT";
             selectDifficult.TextAlign = ContentAlignment.MiddleCenter;
@@ -80,7 +82,7 @@
             btnDifficultSelectRight.BackgroundImage = Properties.Resources.difficulty_select_right;
             btnDifficultSelectRight.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectRight.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectRight.Location = new Point(362, 510);
+            btnDifficultSelectRight.Location = new Point(342, 548);
             btnDifficultSelectRight.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectRight.Name = "btnDifficultSelectRight";
             btnDifficultSelectRight.PressedBackgroundImage = Properties.Resources.difficulty_select_right_pressed;
@@ -94,7 +96,7 @@
             btnDifficultSelectLeft.BackgroundImage = Properties.Resources.difficulty_select_left;
             btnDifficultSelectLeft.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectLeft.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectLeft.Location = new Point(186, 510);
+            btnDifficultSelectLeft.Location = new Point(196, 548);
             btnDifficultSelectLeft.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectLeft.Name = "btnDifficultSelectLeft";
             btnDifficultSelectLeft.PressedBackgroundImage = Properties.Resources.difficulty_select_left_pressed;
@@ -107,17 +109,41 @@
             // 
             pbxLevel.BackgroundImage = Properties.Resources.level00;
             pbxLevel.BackgroundImageLayout = ImageLayout.Center;
-            pbxLevel.Location = new Point(227, 473);
+            pbxLevel.Location = new Point(223, 514);
             pbxLevel.Name = "pbxLevel";
             pbxLevel.Size = new Size(114, 116);
             pbxLevel.TabIndex = 6;
             pbxLevel.TabStop = false;
             // 
+            // nameTextBox
+            // 
+            nameTextBox.BackColor = SystemColors.Info;
+            nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            nameTextBox.ForeColor = SystemColors.WindowText;
+            nameTextBox.Location = new Point(172, 353);
+            nameTextBox.Multiline = true;
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.PlaceholderText = "请输入昵称";
+            nameTextBox.Size = new Size(224, 36);
+            nameTextBox.TabIndex = 7;
+            nameTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // tipLabel
+            // 
+            tipLabel.AutoSize = true;
+            tipLabel.ForeColor = Color.Tomato;
+            tipLabel.Location = new Point(201, 392);
+            tipLabel.Name = "tipLabel";
+            tipLabel.Size = new Size(0, 18);
+            tipLabel.TabIndex = 8;
+            // 
             // HomeView
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
+            AutoScaleDimensions = new SizeF(7F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
+            Controls.Add(tipLabel);
+            Controls.Add(nameTextBox);
             Controls.Add(pbxLevel);
             Controls.Add(btnDifficultSelectLeft);
             Controls.Add(btnDifficultSelectRight);
@@ -142,5 +168,7 @@
         private SuperButton btnDifficultSelectRight;
         private SuperButton btnDifficultSelectLeft;
         private PictureBox pbxLevel;
+        private TextBox nameTextBox;
+        private Label tipLabel;
     }
 }

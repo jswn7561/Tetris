@@ -17,6 +17,7 @@ namespace Tetris
         public Brick brick { get; private set; }
         public Brick nextBrick { get; private set; }
         public int difficuleLevel { get; private set; }
+        public UserInfo user { get; private set; }
         public int level { get => levelControl.level; }
         public int score { get => levelControl.score; }
         public int line { get => levelControl.line; }
@@ -214,6 +215,11 @@ namespace Tetris
                 return;
             }
             difficuleLevel--;
+        }
+
+        public void SetName(string n)
+        {
+            user = new UserInfo { name = n };
         }
     }
 }

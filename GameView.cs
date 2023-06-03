@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,12 +81,17 @@ namespace Tetris
             timer.Enabled = true;
             map.Show();
             gameOverView.Hide();
+            retryBtn.Visible = false;
         }
 
         private void OnStopGame()
         {
             timer.Enabled = false;
+            SaveUserScore();
             gameOverView.Show();
+            retryBtn.Visible = true;
+            gameOverView.ShowRank();
+            gameOverView.Sparkle();
             map.Hide();
         }
 
@@ -107,6 +113,19 @@ namespace Tetris
             timer.Interval = game.interval;
 
             pbarGoal.Value = (int)(pbarGoal.TabIndex * game.goalRatio);
+        }
+
+        private void Retry(object sender, EventArgs e)
+        {
+            Game.Instance.Start();
+        }
+        private void SaveUserScore()
+        {
+            Game.Instance.user.score = Game.Instance.score;
+            if (!SQLiteHelper.Instance.SaveOrUpdateUserScore(Game.Instance.user))
+            {
+                Console.WriteLine("更新分数失败");
+            }
         }
     }
 }
