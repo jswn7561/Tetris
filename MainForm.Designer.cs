@@ -33,19 +33,21 @@
             // 
             // content
             // 
-            content.Location = new Point(12, 12);
+            content.Location = new Point(15, 14);
+            content.Margin = new Padding(4);
             content.Name = "content";
             content.Size = new Size(568, 838);
             content.TabIndex = 0;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(235, 107, 0);
-            ClientSize = new Size(592, 862);
+            ClientSize = new Size(603, 953);
             Controls.Add(content);
             KeyPreview = true;
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainForm";
