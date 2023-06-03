@@ -36,7 +36,7 @@
             content.Location = new Point(15, 14);
             content.Margin = new Padding(4);
             content.Name = "content";
-            content.Size = new Size(575, 986);
+            content.Size = new Size(568, 838);
             content.TabIndex = 0;
             // 
             // MainForm

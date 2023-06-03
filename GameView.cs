@@ -119,6 +119,7 @@ namespace Tetris
         {
             Game.Instance.Start();
         }
+
         private void SaveUserScore()
         {
             Game.Instance.user.score = Game.Instance.score;

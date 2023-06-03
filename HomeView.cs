@@ -13,7 +13,6 @@ namespace Tetris
 {
     public partial class HomeView : UserControl
     {
-        Game game = Game.Instance;
         public HomeView()
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace Tetris
             }
             else
             {
-                game.SetName(nameTextBox.Text);
+                Game.Instance.SetName(nameTextBox.Text);
                 MainForm.Instance.ShowGame();
             }
         }
