@@ -58,6 +58,7 @@ namespace Tetris
             InitData();
             CreateBrick();
             PaintMap();
+            OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
         }
 
