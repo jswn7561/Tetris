@@ -81,14 +81,15 @@
             // 
             // retryBtn
             // 
-            retryBtn.BackColor = Color.White;
+            retryBtn.BackColor = Color.Transparent;
+            retryBtn.BackgroundImage = Properties.Resources.button_replay_large;
             retryBtn.BackgroundImageLayout = ImageLayout.Zoom;
             retryBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
             retryBtn.ForeColor = Color.Black;
             retryBtn.Location = new Point(48, 757);
             retryBtn.Margin = new Padding(4, 3, 4, 3);
             retryBtn.Name = "retryBtn";
-            retryBtn.PressedBackgroundImage = null;
+            retryBtn.PressedBackgroundImage = Properties.Resources.button_replay_large_pressed;
             retryBtn.Size = new Size(60, 60);
             retryBtn.TabIndex = 101;
             retryBtn.Visible = false;
