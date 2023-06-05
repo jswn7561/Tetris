@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Tetris
@@ -13,6 +15,7 @@ namespace Tetris
 
         private BrickData data;
         private PenetrateState penetrateState;
+
 
         public Brick(BrickData data)
         {
@@ -77,9 +80,15 @@ namespace Tetris
             g.TranslateTransform(posX, posY);
             g.ScaleTransform(scale, scale);
 
+            //颜色格式转换
+            //data.color = "Red";
+            Color myColor = ColorTranslator.FromHtml(data.color);
+
             foreach (var item in data.layout)
             {
-                g.FillRectangle(new SolidBrush(Color.Green), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
+                // g.FillRectangle(new SolidBrush(Color.Green), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
+                //对应不同颜色
+                g.FillRectangle(new SolidBrush(myColor), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
             }
 
             g.EndContainer(containerState);
