@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Media;
 using System.Resources;
 using System.Text;
 using System.Text.Unicode;
@@ -37,17 +36,12 @@ namespace Tetris
         private Bitmap nextBrickImg;
         private LevelControl levelControl = new LevelControl();
 
-        // 创建SoundPlayer对象
-        SoundPlayer player = new SoundPlayer();
-
         public void Init(Size mapSize, Size nextBrickBoxSize)
         {
             this.mapSize = mapSize;
             mapImg = new Bitmap(mapSize.Width, mapSize.Height);
             nextBrickImg = new Bitmap(nextBrickBoxSize.Width, nextBrickBoxSize.Height);
-            //var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
-            //可匹配颜色
-            string json = Encoding.UTF8.GetString(Resources.BrickConfigs); 
+            var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
             difficuleLevel = 1;
@@ -67,17 +61,11 @@ namespace Tetris
             PaintMap();
             OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
-            // 背景音效
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\main_music.wav";
-            player.Play();
         }
 
         public void Stop()
         {
             OnStop?.Invoke();
-            // 结束音效
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\end_game.wav";
-            player.Play();
         }
 
         public void Update()
@@ -121,13 +109,6 @@ namespace Tetris
         public void CombineBrick()
         {
             brick.Combine();
-
-            //落到底部音效
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\hold.wav";
-            player.PlaySync(); //UI同步
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\main_music.wav";
-            player.Play();     //异步
-
             RemoveFilledRows();
             CreateBrick();
         }
@@ -179,12 +160,6 @@ namespace Tetris
                     data[i, j] = false;
                 }
             }
-            //消行音效
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\clear_row.wav";
-            player.PlaySync(); //UI同步
-            player.SoundLocation = @"..\..\..\Assets\AudioClip\main_music.wav";
-            player.Play();     //异步
-
             // 更新分数等级
             levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
             OnMsgUpdate?.Invoke();
@@ -201,9 +176,7 @@ namespace Tetris
                 {
                     if (data[i, j])
                     {
-                        //g.FillRectangle(new SolidBrush(Color.CadetBlue), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
-                        //颜色改成灰色
-                        g.FillRectangle(new SolidBrush(Color.Gray), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
+                        g.FillRectangle(new SolidBrush(Color.CadetBlue), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
                     }
                 }
             }

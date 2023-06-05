@@ -4,8 +4,7 @@
     "penetrable": true,
     "layout": [
       [ 0, 0 ]
-    ],
-    "color": "White"       //定义颜色
+    ]
   },
   {
     "rotatable": false,
@@ -15,8 +14,7 @@
       [ 1, 0 ],
       [ 0, 1 ],
       [ 1, 1 ]
-    ],
-    "color": "Pink"      //田字型
+    ]
   },
   {
     "rotatable": true,
@@ -26,8 +24,7 @@
       [ -1, 0 ],
       [ 1, 0 ],
       [ 2, 0 ]
-    ],
-    "color": "Red"     //一字型
+    ]
   },
   {
     "rotatable": true,
@@ -37,8 +34,7 @@
       [ 1, 0 ],
       [ -1, 0 ],
       [ 0, -1 ]
-    ],
-    "color": "Blue"
+    ]
   },
   {
     "rotatable": true,
@@ -48,8 +44,7 @@
       [ -1, 0 ],
       [ 0, 1 ],
       [ 1, 1 ]
-    ],
-    "color": "Green"
+    ]
   },
   {
     "rotatable": true,
@@ -59,8 +54,7 @@
       [ 1, 0 ],
       [ 0, 1 ],
       [ -1, 1 ]
-    ],
-    "color": "Gold"
+    ]
   },
   {
     "rotatable": true,
@@ -70,8 +64,7 @@
       [ 0, -1 ],
       [ 1, 0 ],
       [ 2, 0 ]
-    ],
-    "color": "Purple"
+    ]
   },
   {
     "rotatable": true,
@@ -81,7 +74,6 @@
       [ 0, -1 ],
       [ -1, 0 ],
       [ -2, 0 ]
-    ],
-    "color": "Brown"
+    ]
   }
 ]
