@@ -11,8 +11,8 @@ namespace Tetris
         static void Main()
         {
             AllocConsole();
-            AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling rg.ttf");
-            AddFontResource(@"..\..\..\Assets\Font\kleptocracy titling bd.ttf");
+            AddFontResource("Assets/Font/kleptocracy titling rg.ttf");
+            AddFontResource("Assets/Font/kleptocracy titling bd.ttf");
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
