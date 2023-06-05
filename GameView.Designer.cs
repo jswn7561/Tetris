@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameView));
             map = new PictureBox();
             rightBox = new Panel();
             retryBtn = new SuperButton();
@@ -82,15 +81,14 @@
             // 
             // retryBtn
             // 
-            retryBtn.BackColor = Color.Transparent;
-            retryBtn.BackgroundImage = (Image)resources.GetObject("retryBtn.BackgroundImage");
+            retryBtn.BackColor = Color.White;
             retryBtn.BackgroundImageLayout = ImageLayout.Zoom;
             retryBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
             retryBtn.ForeColor = Color.Black;
             retryBtn.Location = new Point(48, 757);
             retryBtn.Margin = new Padding(4, 3, 4, 3);
             retryBtn.Name = "retryBtn";
-            retryBtn.PressedBackgroundImage = (Image)resources.GetObject("retryBtn.PressedBackgroundImage");
+            retryBtn.PressedBackgroundImage = null;
             retryBtn.Size = new Size(60, 60);
             retryBtn.TabIndex = 101;
             retryBtn.Visible = false;
@@ -220,8 +218,7 @@
             // 
             // GameView
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Black;
             Controls.Add(leftBox);
             Controls.Add(rightBox);

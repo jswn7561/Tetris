@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOverView));
             GameOverTitle = new PictureBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
@@ -84,7 +83,6 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(93, 28);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(184, 65);
@@ -455,8 +453,7 @@
             // 
             // GameOverView
             // 
-            AutoScaleDimensions = new SizeF(7F, 18F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Black;
             Controls.Add(panel1);
             Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Regular, GraphicsUnit.Point);
