@@ -119,10 +119,11 @@
             // tipLabel
             // 
             tipLabel.AutoSize = true;
+            tipLabel.Font = new Font("Kleptocracy Titling Rg", 11F, FontStyle.Bold, GraphicsUnit.Point);
             tipLabel.ForeColor = Color.Tomato;
             tipLabel.Location = new Point(195, 390);
             tipLabel.Name = "tipLabel";
-            tipLabel.Size = new Size(0, 14);
+            tipLabel.Size = new Size(0, 18);
             tipLabel.TabIndex = 8;
             // 
             // nameSbtn
@@ -145,7 +146,7 @@
             nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
             nameTextBox.Location = new Point(179, 348);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.PlaceholderText = "请输入昵称";
+            nameTextBox.PlaceholderText = "please enter a nickname";
             nameTextBox.Size = new Size(206, 23);
             nameTextBox.TabIndex = 10;
             nameTextBox.TextAlign = HorizontalAlignment.Center;
