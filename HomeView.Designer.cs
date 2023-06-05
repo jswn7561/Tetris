@@ -34,8 +34,9 @@
             btnDifficultSelectRight = new SuperButton();
             btnDifficultSelectLeft = new SuperButton();
             pbxLevel = new PictureBox();
-            nameTextBox = new TextBox();
             tipLabel = new Label();
+            nameSbtn = new SuperButton();
+            nameTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxLevel).BeginInit();
             SuspendLayout();
@@ -115,34 +116,48 @@
             pbxLevel.TabIndex = 6;
             pbxLevel.TabStop = false;
             // 
-            // nameTextBox
-            // 
-            nameTextBox.BackColor = SystemColors.Info;
-            nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nameTextBox.ForeColor = SystemColors.WindowText;
-            nameTextBox.Location = new Point(172, 353);
-            nameTextBox.Multiline = true;
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.PlaceholderText = "请输入昵称";
-            nameTextBox.Size = new Size(224, 36);
-            nameTextBox.TabIndex = 7;
-            nameTextBox.TextAlign = HorizontalAlignment.Center;
-            // 
             // tipLabel
             // 
             tipLabel.AutoSize = true;
+            tipLabel.Font = new Font("Kleptocracy Titling Rg", 11F, FontStyle.Bold, GraphicsUnit.Point);
             tipLabel.ForeColor = Color.Tomato;
-            tipLabel.Location = new Point(201, 392);
+            tipLabel.Location = new Point(195, 390);
             tipLabel.Name = "tipLabel";
-            tipLabel.Size = new Size(0, 14);
+            tipLabel.Size = new Size(0, 18);
             tipLabel.TabIndex = 8;
+            // 
+            // nameSbtn
+            // 
+            nameSbtn.BackgroundImage = Properties.Resources.input_box;
+            nameSbtn.BackgroundImageLayout = ImageLayout.Center;
+            nameSbtn.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            nameSbtn.Location = new Point(163, 332);
+            nameSbtn.Margin = new Padding(3, 2, 3, 2);
+            nameSbtn.Name = "nameSbtn";
+            nameSbtn.PressedBackgroundImage = null;
+            nameSbtn.RightToLeft = RightToLeft.No;
+            nameSbtn.Size = new Size(236, 56);
+            nameSbtn.TabIndex = 9;
+            // 
+            // nameTextBox
+            // 
+            nameTextBox.BackColor = SystemColors.HighlightText;
+            nameTextBox.BorderStyle = BorderStyle.None;
+            nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            nameTextBox.Location = new Point(179, 348);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.PlaceholderText = "please enter a nickname";
+            nameTextBox.Size = new Size(206, 23);
+            nameTextBox.TabIndex = 10;
+            nameTextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // HomeView
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Black;
-            Controls.Add(tipLabel);
             Controls.Add(nameTextBox);
+            Controls.Add(nameSbtn);
+            Controls.Add(tipLabel);
             Controls.Add(pbxLevel);
             Controls.Add(btnDifficultSelectLeft);
             Controls.Add(btnDifficultSelectRight);
@@ -167,7 +182,8 @@
         private SuperButton btnDifficultSelectRight;
         private SuperButton btnDifficultSelectLeft;
         private PictureBox pbxLevel;
-        private TextBox nameTextBox;
         private Label tipLabel;
+        private SuperButton nameSbtn;
+        private TextBox nameTextBox;
     }
 }

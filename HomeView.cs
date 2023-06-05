@@ -22,7 +22,7 @@ namespace Tetris
         {
             if (nameTextBox.Text == "")
             {
-                tipLabel.Text = "是哪位高手，请报上名来！";
+                tipLabel.Text = "Hi, leave your name!";
             }
             else
             {
