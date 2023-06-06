@@ -59,14 +59,14 @@ namespace Tetris
             InitData();
             CreateBrick();
             PaintMap();
-            Music.Instance.Background(); //背景音效
+            AudioManager.Instance.PlayBackground(); //背景音效
             OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
         }
 
         public void Stop()
         {
-            Music.Instance.Stop();    //结束音效
+            AudioManager.Instance.PlayStop();    //结束音效
             OnStop?.Invoke();
         }
 
@@ -111,7 +111,7 @@ namespace Tetris
         public void CombineBrick()
         {
             brick.Combine();
-            Music.Instance.Hold();     //落到底部音效
+            AudioManager.Instance.Hold();     //落到底部音效
             RemoveFilledRows();
             CreateBrick();
         }
@@ -163,7 +163,7 @@ namespace Tetris
                     data[i, j] = false;
                 }
             }
-            Music.Instance.Clear(); //消行音效
+            AudioManager.Instance.Clear(); //消行音效
             // 更新分数等级
             levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
             OnMsgUpdate?.Invoke();

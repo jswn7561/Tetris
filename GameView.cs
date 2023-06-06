@@ -48,7 +48,7 @@ namespace Tetris
         private void ShowHome(object sender, EventArgs e)
         {
             //停止背景音乐
-            Music.Instance.Stop();
+            AudioManager.Instance.PlayStop();
             MainForm.Instance.ShowHome();
         }
 
