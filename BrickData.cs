@@ -8,5 +8,6 @@ namespace Tetris
         public bool rotatable;
         public bool penetrable;
         public int[][] layout;
+        public string color;    //颜色
     }
 }
