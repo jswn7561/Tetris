@@ -77,9 +77,11 @@ namespace Tetris
             g.TranslateTransform(posX, posY);
             g.ScaleTransform(scale, scale);
 
+            //颜色格式转换
+            Color myColor = ColorTranslator.FromHtml(data.color);
             foreach (var item in data.layout)
-            {
-                g.FillRectangle(new SolidBrush(Color.Green), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
+            {   //颜色更换
+                g.FillRectangle(new SolidBrush(myColor), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
             }
 
             g.EndContainer(containerState);

@@ -41,7 +41,7 @@ namespace Tetris
             this.mapSize = mapSize;
             mapImg = new Bitmap(mapSize.Width, mapSize.Height);
             nextBrickImg = new Bitmap(nextBrickBoxSize.Width, nextBrickBoxSize.Height);
-            var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
+            string json = Encoding.UTF8.GetString(Resources.BrickConfigs);    //适应颜色
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
             difficuleLevel = 1;
@@ -59,12 +59,14 @@ namespace Tetris
             InitData();
             CreateBrick();
             PaintMap();
+            Music.Instance.Background(); //背景音效
             OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
         }
 
         public void Stop()
         {
+            Music.Instance.Stop();    //结束音效
             OnStop?.Invoke();
         }
 
@@ -109,6 +111,7 @@ namespace Tetris
         public void CombineBrick()
         {
             brick.Combine();
+            Music.Instance.Hold();     //落到底部音效
             RemoveFilledRows();
             CreateBrick();
         }
@@ -160,6 +163,7 @@ namespace Tetris
                     data[i, j] = false;
                 }
             }
+            Music.Instance.Clear(); //消行音效
             // 更新分数等级
             levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
             OnMsgUpdate?.Invoke();
@@ -175,8 +179,8 @@ namespace Tetris
                 for (int j = 0, lenY = data.GetLength(1); j < lenY; j++)
                 {
                     if (data[i, j])
-                    {
-                        g.FillRectangle(new SolidBrush(Color.CadetBlue), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
+                    {   //颜色改成灰色
+                        g.FillRectangle(new SolidBrush(Color.Gray), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
                     }
                 }
             }
