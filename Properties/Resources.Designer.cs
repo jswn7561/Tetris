@@ -203,6 +203,16 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap brick_purple {
+            get {
+                object obj = ResourceManager.GetObject("brick_purple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap brick_red {
             get {
                 object obj = ResourceManager.GetObject("brick_red", resourceCulture);

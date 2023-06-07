@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Resources;
 using System.Text;
+using Tetris.Properties;
 
 namespace Tetris
 {
@@ -77,17 +79,16 @@ namespace Tetris
             g.TranslateTransform(posX, posY);
             g.ScaleTransform(scale, scale);
 
-            //颜色格式转换
-            Color myColor = ColorTranslator.FromHtml(data.color);
             foreach (var item in data.layout)
-            {   //颜色更换
-                g.FillRectangle(new SolidBrush(myColor), item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
+            {
+                var img = (Bitmap)Resources.ResourceManager.GetObject(data.name, Resources.Culture);
+                g.DrawImage(img, item[0] * SizeWithSpace, item[1] * SizeWithSpace, Size, Size);
             }
 
             g.EndContainer(containerState);
         }
 
-        public void Move(Direction direction)
+        public bool Move(Direction direction)
         {
             var newPosition = position;
             switch (direction)
@@ -109,17 +110,18 @@ namespace Tetris
                 {
                     Game.Instance.CombineBrick();
                 }
-                return;
+                return false;
             }
 
             position = newPosition;
+            return true;
         }
 
-        public void Rotate()
+        public bool Rotate()
         {
             if (!data.rotatable)
             {
-                return;
+                return false;
             }
 
             var newLayout = new int[data.layout.Length][];
@@ -132,7 +134,10 @@ namespace Tetris
             if (!DetectCollision(position, newLayout))
             {
                 data.layout = newLayout;
+                return true;
             }
+
+            return false;
         }
 
         public bool DetectCollision()
@@ -166,7 +171,7 @@ namespace Tetris
                     break;
                 }
 
-                if (mapData[itemIndexX, itemIndexY])
+                if (mapData[itemIndexX, itemIndexY].hasBrick)
                 {
                     detected = true;
                     break;
@@ -212,7 +217,10 @@ namespace Tetris
             {
                 var itemIndexX = indexX + item[0];
                 var itemIndexY = indexY + item[1];
-                mapData[itemIndexX, itemIndexY] = true;
+                var gridData = mapData[itemIndexX, itemIndexY];
+                gridData.name = data.name;
+                gridData.hasBrick = true;
+                mapData[itemIndexX, itemIndexY] = gridData;
             }
         }
     }

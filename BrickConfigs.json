@@ -5,7 +5,7 @@
     "layout": [
       [ 0, 0 ]
     ],
-    "color":"White" 
+    "name": "brick_purple"
   },
   {
     "rotatable": false,
@@ -16,7 +16,7 @@
       [ 0, 1 ],
       [ 1, 1 ]
     ],
-    "color":"Pink"
+    "name": "brick_red"
   },
   {
     "rotatable": true,
@@ -27,7 +27,7 @@
       [ 1, 0 ],
       [ 2, 0 ]
     ],
-    "color":"Red"
+    "name": "brick_pink00"
   },
   {
     "rotatable": true,
@@ -38,7 +38,7 @@
       [ -1, 0 ],
       [ 0, -1 ]
     ],
-    "color":"Blue"
+    "name": "brick_orange"
   },
   {
     "rotatable": true,
@@ -49,7 +49,7 @@
       [ 0, 1 ],
       [ 1, 1 ]
     ],
-    "color":"Green"
+    "name": "brick_blue02"
   },
   {
     "rotatable": true,
@@ -60,7 +60,7 @@
       [ 0, 1 ],
       [ -1, 1 ]
     ],
-    "color":"Gold"
+    "name": "brick_green00"
   },
   {
     "rotatable": true,
@@ -71,7 +71,7 @@
       [ 1, 0 ],
       [ 2, 0 ]
     ],
-    "color":"Purple"
+    "name": "brick_blue01"
   },
   {
     "rotatable": true,
@@ -82,6 +82,6 @@
       [ -1, 0 ],
       [ -2, 0 ]
     ],
-    "color":"Brown"
+    "name": "brick_blue00"
   }
 ]

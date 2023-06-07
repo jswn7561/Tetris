@@ -45,6 +45,7 @@ namespace Tetris
         private void OnLoad(object sender, EventArgs e)
         {
             ShowHome();
+            AudioManager.Instance.PlayBackground();
         }
     }
 }

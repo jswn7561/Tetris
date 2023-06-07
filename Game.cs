@@ -11,6 +11,12 @@ namespace Tetris
 {
     internal class Game
     {
+        public struct GridData
+        {
+            public string name;
+            public bool hasBrick;
+        }
+
         private static Game instance;
         public static Game Instance => instance ??= new Game();
         public Size mapSize { get; private set; }
@@ -23,7 +29,7 @@ namespace Tetris
         public int line { get => levelControl.line; }
         public int interval { get => levelControl.interval; }
         public float goalRatio { get => levelControl.goalRatio; }
-        public bool[,] data { get; private set; }
+        public GridData[,] data { get; private set; }
         public event Action<Bitmap> OnMapPaint;
         public event Action<Bitmap> OnNextBrickPaint;
         public event Action OnStart;
@@ -41,7 +47,7 @@ namespace Tetris
             this.mapSize = mapSize;
             mapImg = new Bitmap(mapSize.Width, mapSize.Height);
             nextBrickImg = new Bitmap(nextBrickBoxSize.Width, nextBrickBoxSize.Height);
-            string json = Encoding.UTF8.GetString(Resources.BrickConfigs);    //适应颜色
+            var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
             difficuleLevel = 1;
@@ -49,7 +55,7 @@ namespace Tetris
 
         private void InitData()
         {
-            data = new bool[(mapSize.Width + Brick.Space) / Brick.SizeWithSpace,
+            data = new GridData[(mapSize.Width + Brick.Space) / Brick.SizeWithSpace,
                 (mapSize.Height + Brick.Space) / Brick.SizeWithSpace];
         }
 
@@ -59,14 +65,13 @@ namespace Tetris
             InitData();
             CreateBrick();
             PaintMap();
-            AudioManager.Instance.PlayBackground(); //背景音效
             OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
         }
 
         public void Stop()
         {
-            AudioManager.Instance.PlayStop();    //结束音效
+            AudioManager.Instance.PlayStop();
             OnStop?.Invoke();
         }
 
@@ -104,19 +109,30 @@ namespace Tetris
 
         public void RotateBrick()
         {
-            brick.Rotate();
+            if (brick.Rotate())
+            {
+                AudioManager.Instance.PlayBrickRotate();
+            }
+
             PaintMap();
         }
 
         public void CombineBrick()
         {
             brick.Combine();
-            AudioManager.Instance.Hold();     //落到底部音效
-            RemoveFilledRows();
+            if (RemoveFilledRows())
+            {
+                AudioManager.Instance.PlayClearRow();
+            }
+            else
+            {
+                AudioManager.Instance.PlayBrickStop();
+            }
+
             CreateBrick();
         }
 
-        private void RemoveFilledRows()
+        private bool RemoveFilledRows()
         {
             var unfilledRowIndices = new List<int>();
             for (int j = data.GetLength(1) - 1; j >= 0; j--)
@@ -124,7 +140,7 @@ namespace Tetris
                 var isFilled = true;
                 for (int i = data.GetLength(0) - 1; i >= 0; i--)
                 {
-                    if (!data[i, j])
+                    if (!data[i, j].hasBrick)
                     {
                         isFilled = false;
                         break;
@@ -139,7 +155,7 @@ namespace Tetris
 
             if (unfilledRowIndices.Count == data.GetLength(1))
             {
-                return;
+                return false;
             }
 
             var newJ = data.GetLength(1) - 1;
@@ -160,13 +176,16 @@ namespace Tetris
             {
                 for (int i = 0; i < data.GetLength(0); i++)
                 {
-                    data[i, j] = false;
+                    var item = data[i, j];
+                    item.hasBrick = false;
+                    data[i, j] = item;
                 }
             }
-            AudioManager.Instance.Clear(); //消行音效
+
             // 更新分数等级
             levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
             OnMsgUpdate?.Invoke();
+            return true;
         }
 
         private void PaintMap()
@@ -178,9 +197,11 @@ namespace Tetris
             {
                 for (int j = 0, lenY = data.GetLength(1); j < lenY; j++)
                 {
-                    if (data[i, j])
-                    {   //颜色改成灰色
-                        g.FillRectangle(new SolidBrush(Color.Gray), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
+                    var item = data[i, j];
+                    if (item.hasBrick)
+                    {
+                        var img = (Bitmap)Resources.ResourceManager.GetObject(item.name, Resources.Culture);
+                        g.DrawImage(img, i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
                     }
                 }
             }

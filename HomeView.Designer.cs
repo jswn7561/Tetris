@@ -71,7 +71,7 @@
             selectDifficult.AutoSize = true;
             selectDifficult.Font = new Font("Kleptocracy Titling Rg", 20F, FontStyle.Bold, GraphicsUnit.Point);
             selectDifficult.ForeColor = Color.White;
-            selectDifficult.Location = new Point(186, 425);
+            selectDifficult.Location = new Point(186, 506);
             selectDifficult.Name = "selectDifficult";
             selectDifficult.Size = new Size(196, 33);
             selectDifficult.TabIndex = 3;
@@ -83,7 +83,7 @@
             btnDifficultSelectRight.BackgroundImage = Properties.Resources.difficulty_select_right;
             btnDifficultSelectRight.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectRight.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectRight.Location = new Point(362, 510);
+            btnDifficultSelectRight.Location = new Point(362, 591);
             btnDifficultSelectRight.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectRight.Name = "btnDifficultSelectRight";
             btnDifficultSelectRight.PressedBackgroundImage = Properties.Resources.difficulty_select_right_pressed;
@@ -97,7 +97,7 @@
             btnDifficultSelectLeft.BackgroundImage = Properties.Resources.difficulty_select_left;
             btnDifficultSelectLeft.BackgroundImageLayout = ImageLayout.Center;
             btnDifficultSelectLeft.Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDifficultSelectLeft.Location = new Point(186, 510);
+            btnDifficultSelectLeft.Location = new Point(186, 591);
             btnDifficultSelectLeft.Margin = new Padding(3, 2, 3, 2);
             btnDifficultSelectLeft.Name = "btnDifficultSelectLeft";
             btnDifficultSelectLeft.PressedBackgroundImage = Properties.Resources.difficulty_select_left_pressed;
@@ -110,7 +110,7 @@
             // 
             pbxLevel.BackgroundImage = Properties.Resources.level00;
             pbxLevel.BackgroundImageLayout = ImageLayout.Center;
-            pbxLevel.Location = new Point(227, 473);
+            pbxLevel.Location = new Point(227, 554);
             pbxLevel.Name = "pbxLevel";
             pbxLevel.Size = new Size(114, 116);
             pbxLevel.TabIndex = 6;
@@ -118,20 +118,20 @@
             // 
             // tipLabel
             // 
-            tipLabel.AutoSize = true;
             tipLabel.Font = new Font("Kleptocracy Titling Rg", 11F, FontStyle.Bold, GraphicsUnit.Point);
             tipLabel.ForeColor = Color.Tomato;
-            tipLabel.Location = new Point(195, 390);
+            tipLabel.Location = new Point(163, 471);
             tipLabel.Name = "tipLabel";
-            tipLabel.Size = new Size(0, 18);
+            tipLabel.Size = new Size(236, 18);
             tipLabel.TabIndex = 8;
+            tipLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // nameSbtn
             // 
             nameSbtn.BackgroundImage = Properties.Resources.input_box;
             nameSbtn.BackgroundImageLayout = ImageLayout.Center;
             nameSbtn.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nameSbtn.Location = new Point(163, 332);
+            nameSbtn.Location = new Point(163, 413);
             nameSbtn.Margin = new Padding(3, 2, 3, 2);
             nameSbtn.Name = "nameSbtn";
             nameSbtn.PressedBackgroundImage = null;
@@ -144,7 +144,7 @@
             nameTextBox.BackColor = SystemColors.HighlightText;
             nameTextBox.BorderStyle = BorderStyle.None;
             nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nameTextBox.Location = new Point(179, 348);
+            nameTextBox.Location = new Point(179, 429);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.PlaceholderText = "please enter a nickname";
             nameTextBox.Size = new Size(206, 23);

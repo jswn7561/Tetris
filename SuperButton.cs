@@ -63,6 +63,7 @@ namespace Tetris
             }
 
             label.ForeColor = base.ForeColor;
+            AudioManager.Instance.PlayButtonClick();
         }
     }
 }
