@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             map = new PictureBox();
             rightBox = new Panel();
+            retryBtn = new SuperButton();
             pbarGoal = new GameProgressBar();
             homeBtn = new SuperButton();
             nextBrickBox = new PictureBox();
@@ -61,6 +62,7 @@
             // rightBox
             // 
             rightBox.BackColor = Color.FromArgb(38, 12, 2);
+            rightBox.Controls.Add(retryBtn);
             rightBox.Controls.Add(pbarGoal);
             rightBox.Controls.Add(homeBtn);
             rightBox.Controls.Add(nextBrickBox);
@@ -76,6 +78,22 @@
             rightBox.Name = "rightBox";
             rightBox.Size = new Size(150, 838);
             rightBox.TabIndex = 2;
+            // 
+            // retryBtn
+            // 
+            retryBtn.BackColor = Color.Transparent;
+            retryBtn.BackgroundImage = Properties.Resources.button_replay_large;
+            retryBtn.BackgroundImageLayout = ImageLayout.Zoom;
+            retryBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            retryBtn.ForeColor = Color.Black;
+            retryBtn.Location = new Point(48, 691);
+            retryBtn.Margin = new Padding(4, 3, 4, 3);
+            retryBtn.Name = "retryBtn";
+            retryBtn.PressedBackgroundImage = Properties.Resources.button_replay_large_pressed;
+            retryBtn.Size = new Size(60, 60);
+            retryBtn.TabIndex = 101;
+            retryBtn.Visible = false;
+            retryBtn.Click += Retry;
             // 
             // pbarGoal
             // 
@@ -99,7 +117,7 @@
             homeBtn.BackgroundImageLayout = ImageLayout.Zoom;
             homeBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
             homeBtn.ForeColor = Color.Black;
-            homeBtn.Location = new Point(45, 761);
+            homeBtn.Location = new Point(48, 757);
             homeBtn.Margin = new Padding(4, 3, 4, 3);
             homeBtn.Name = "homeBtn";
             homeBtn.PressedBackgroundImage = Properties.Resources.button_home_pressed;
@@ -201,8 +219,7 @@
             // 
             // GameView
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Black;
             Controls.Add(leftBox);
             Controls.Add(rightBox);
@@ -233,5 +250,6 @@
         private SuperButton homeBtn;
         private Panel leftBox;
         private GameProgressBar pbarGoal;
+        private SuperButton retryBtn;
     }
 }

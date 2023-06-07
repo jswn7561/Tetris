@@ -42,8 +42,7 @@
             // 
             // SuperButton
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             Controls.Add(label);
             Font = new Font("Kleptocracy Titling Rg", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(3, 2, 3, 2);

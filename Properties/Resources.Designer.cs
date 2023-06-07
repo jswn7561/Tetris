@@ -203,6 +203,16 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap brick_purple {
+            get {
+                object obj = ResourceManager.GetObject("brick_purple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap brick_red {
             get {
                 object obj = ResourceManager.GetObject("brick_red", resourceCulture);
@@ -473,6 +483,26 @@ namespace Tetris.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap button_replay_large_pressed {
+            get {
+                object obj = ResourceManager.GetObject("button_replay_large_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap button_replay_large1 {
+            get {
+                object obj = ResourceManager.GetObject("button_replay_large1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap button_right {
             get {
                 object obj = ResourceManager.GetObject("button_right", resourceCulture);
@@ -596,6 +626,16 @@ namespace Tetris.Properties {
         internal static System.Drawing.Bitmap in_corner {
             get {
                 object obj = ResourceManager.GetObject("in_corner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap input_box {
+            get {
+                object obj = ResourceManager.GetObject("input_box", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

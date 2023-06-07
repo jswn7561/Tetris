@@ -11,18 +11,25 @@ namespace Tetris
 {
     internal class Game
     {
+        public struct GridData
+        {
+            public string name;
+            public bool hasBrick;
+        }
+
         private static Game instance;
         public static Game Instance => instance ??= new Game();
         public Size mapSize { get; private set; }
         public Brick brick { get; private set; }
         public Brick nextBrick { get; private set; }
         public int difficuleLevel { get; private set; }
+        public UserInfo user { get; private set; }
         public int level { get => levelControl.level; }
         public int score { get => levelControl.score; }
         public int line { get => levelControl.line; }
         public int interval { get => levelControl.interval; }
         public float goalRatio { get => levelControl.goalRatio; }
-        public bool[,] data { get; private set; }
+        public GridData[,] data { get; private set; }
         public event Action<Bitmap> OnMapPaint;
         public event Action<Bitmap> OnNextBrickPaint;
         public event Action OnStart;
@@ -48,7 +55,7 @@ namespace Tetris
 
         private void InitData()
         {
-            data = new bool[(mapSize.Width + Brick.Space) / Brick.SizeWithSpace,
+            data = new GridData[(mapSize.Width + Brick.Space) / Brick.SizeWithSpace,
                 (mapSize.Height + Brick.Space) / Brick.SizeWithSpace];
         }
 
@@ -64,6 +71,7 @@ namespace Tetris
 
         public void Stop()
         {
+            AudioManager.Instance.PlayStop();
             OnStop?.Invoke();
         }
 
@@ -101,18 +109,30 @@ namespace Tetris
 
         public void RotateBrick()
         {
-            brick.Rotate();
+            if (brick.Rotate())
+            {
+                AudioManager.Instance.PlayBrickRotate();
+            }
+
             PaintMap();
         }
 
         public void CombineBrick()
         {
             brick.Combine();
-            RemoveFilledRows();
+            if (RemoveFilledRows())
+            {
+                AudioManager.Instance.PlayClearRow();
+            }
+            else
+            {
+                AudioManager.Instance.PlayBrickStop();
+            }
+
             CreateBrick();
         }
 
-        private void RemoveFilledRows()
+        private bool RemoveFilledRows()
         {
             var unfilledRowIndices = new List<int>();
             for (int j = data.GetLength(1) - 1; j >= 0; j--)
@@ -120,7 +140,7 @@ namespace Tetris
                 var isFilled = true;
                 for (int i = data.GetLength(0) - 1; i >= 0; i--)
                 {
-                    if (!data[i, j])
+                    if (!data[i, j].hasBrick)
                     {
                         isFilled = false;
                         break;
@@ -135,7 +155,7 @@ namespace Tetris
 
             if (unfilledRowIndices.Count == data.GetLength(1))
             {
-                return;
+                return false;
             }
 
             var newJ = data.GetLength(1) - 1;
@@ -156,12 +176,16 @@ namespace Tetris
             {
                 for (int i = 0; i < data.GetLength(0); i++)
                 {
-                    data[i, j] = false;
+                    var item = data[i, j];
+                    item.hasBrick = false;
+                    data[i, j] = item;
                 }
             }
+
             // 更新分数等级
             levelControl.Update(data.GetLength(1) - unfilledRowIndices.Count);
             OnMsgUpdate?.Invoke();
+            return true;
         }
 
         private void PaintMap()
@@ -173,9 +197,11 @@ namespace Tetris
             {
                 for (int j = 0, lenY = data.GetLength(1); j < lenY; j++)
                 {
-                    if (data[i, j])
+                    var item = data[i, j];
+                    if (item.hasBrick)
                     {
-                        g.FillRectangle(new SolidBrush(Color.CadetBlue), i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
+                        var img = (Bitmap)Resources.ResourceManager.GetObject(item.name, Resources.Culture);
+                        g.DrawImage(img, i * Brick.SizeWithSpace, j * Brick.SizeWithSpace, Brick.Size, Brick.Size);
                     }
                 }
             }
@@ -215,6 +241,11 @@ namespace Tetris
                 return;
             }
             difficuleLevel--;
+        }
+
+        public void SetName(string n)
+        {
+            user = new UserInfo { name = n };
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             content = new Panel();
             SuspendLayout();
             // 
@@ -40,16 +41,16 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(235, 107, 0);
             ClientSize = new Size(592, 862);
             Controls.Add(content);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainForm";
-            Text = "俄罗斯方块";
+            Text = "Tetris";
             Load += OnLoad;
             ResumeLayout(false);
         }

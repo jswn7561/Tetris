@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Tetris
             gameView = new GameView();
             content.Controls.Add(homeView);
             content.Controls.Add(gameView);
+            SQLiteHelper.Instance.CreateTable();
         }
 
         public void ShowHome()
@@ -43,6 +45,7 @@ namespace Tetris
         private void OnLoad(object sender, EventArgs e)
         {
             ShowHome();
+            AudioManager.Instance.PlayBackground();
         }
     }
 }

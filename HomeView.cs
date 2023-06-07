@@ -20,7 +20,15 @@ namespace Tetris
 
         private void StartGame(object sender, EventArgs e)
         {
-            MainForm.Instance.ShowGame();
+            if (nameTextBox.Text == "")
+            {
+                tipLabel.Text = "Hi, leave your name!";
+            }
+            else
+            {
+                Game.Instance.SetName(nameTextBox.Text);
+                MainForm.Instance.ShowGame();
+            }
         }
 
         private void AddDifficult(object sender, EventArgs e)
