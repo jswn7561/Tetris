@@ -31,19 +31,32 @@ namespace Tetris
             }
         }
 
+        /// <summary>
+        /// 右箭头按钮功能：增加困难等级
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
             game.AddLevel();
             SelectDifficultPic(game.difficuleLevel);
         }
+        /// <summary>
+        /// 左箭头按钮功能：减小困难等级
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
             game.SubLevel();
             SelectDifficultPic(game.difficuleLevel);
         }
-
+        /// <summary>
+        /// 根据困难等级选择对应的图片
+        /// </summary>
+        /// <param name="difficuleLevel">困难等级</param>
         private void SelectDifficultPic(int difficuleLevel)
         {
             string imgName = string.Format("level{0:d2}", difficuleLevel - 1);

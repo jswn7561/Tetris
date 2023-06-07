@@ -40,7 +40,7 @@ namespace Tetris
         private Random random;
         private Bitmap mapImg;
         private Bitmap nextBrickImg;
-        private LevelControl levelControl = new LevelControl();
+        private LevelControl levelControl = new LevelControl();         // 创建等级控制实例
 
         public void Init(Size mapSize, Size nextBrickBoxSize)
         {
@@ -61,6 +61,7 @@ namespace Tetris
 
         public void Start()
         {
+            // 初始化等级控制实例
             levelControl.Init(difficuleLevel);
             InitData();
             CreateBrick();
@@ -104,6 +105,11 @@ namespace Tetris
         public void MoveBrick(Direction direction)
         {
             brick.Move(direction);
+            PaintMap();
+        }
+        public void DownBrick()
+        {
+            while (brick.Move(Direction.Down)) ;
             PaintMap();
         }
 
@@ -152,7 +158,7 @@ namespace Tetris
                     unfilledRowIndices.Add(j);
                 }
             }
-
+            
             if (unfilledRowIndices.Count == data.GetLength(1))
             {
                 return false;

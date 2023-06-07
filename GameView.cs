@@ -52,7 +52,7 @@ namespace Tetris
 
         protected override bool ProcessDialogKey(Keys keyData)
         {
-            if (timer.Enabled && keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right)
+            if (timer.Enabled && keyData is Keys.Up or Keys.Down or Keys.Left or Keys.Right or Keys.Space)
             {
                 switch (keyData)
                 {
@@ -67,6 +67,9 @@ namespace Tetris
                         break;
                     case Keys.Right:
                         Game.Instance.MoveBrick(Direction.Right);
+                        break;
+                    case Keys.Space:
+                        Game.Instance.DownBrick();
                         break;
                 }
 
@@ -104,7 +107,9 @@ namespace Tetris
         {
             nextBrickBox.Image = img;
         }
-
+        /// <summary>
+        /// 更新游戏界面的信息：等级、分数、进度条 以及 下落速度
+        /// </summary>
         private void OnMsgUpdate()
         {
             var game = Game.Instance;
