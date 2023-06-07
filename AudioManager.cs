@@ -13,7 +13,7 @@ namespace Tetris
 
         public void PlayBackground()
         {
-            musicPlayer.Play(dirPath + "/main_music.wav");
+            musicPlayer.Play(dirPath + "/main_music.mp3", true);
         }
 
         public void PlayStop()

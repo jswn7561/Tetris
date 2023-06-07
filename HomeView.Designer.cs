@@ -71,7 +71,7 @@
             selectDifficult.AutoSize = true;
             selectDifficult.Font = new Font("Kleptocracy Titling Rg", 20F, FontStyle.Bold, GraphicsUnit.Point);
             selectDifficult.ForeColor = Color.White;
-            selectDifficult.Location = new Point(186, 506);
+            selectDifficult.Location = new Point(189, 506);
             selectDifficult.Name = "selectDifficult";
             selectDifficult.Size = new Size(196, 33);
             selectDifficult.TabIndex = 3;
@@ -120,7 +120,7 @@
             // 
             tipLabel.Font = new Font("Kleptocracy Titling Rg", 11F, FontStyle.Bold, GraphicsUnit.Point);
             tipLabel.ForeColor = Color.Tomato;
-            tipLabel.Location = new Point(163, 471);
+            tipLabel.Location = new Point(166, 471);
             tipLabel.Name = "tipLabel";
             tipLabel.Size = new Size(236, 18);
             tipLabel.TabIndex = 8;
@@ -131,7 +131,7 @@
             nameSbtn.BackgroundImage = Properties.Resources.input_box;
             nameSbtn.BackgroundImageLayout = ImageLayout.Center;
             nameSbtn.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nameSbtn.Location = new Point(163, 413);
+            nameSbtn.Location = new Point(166, 413);
             nameSbtn.Margin = new Padding(3, 2, 3, 2);
             nameSbtn.Name = "nameSbtn";
             nameSbtn.PressedBackgroundImage = null;
@@ -144,7 +144,7 @@
             nameTextBox.BackColor = SystemColors.HighlightText;
             nameTextBox.BorderStyle = BorderStyle.None;
             nameTextBox.Font = new Font("Kleptocracy Titling Rg", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nameTextBox.Location = new Point(179, 429);
+            nameTextBox.Location = new Point(182, 429);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.PlaceholderText = "please enter a nickname";
             nameTextBox.Size = new Size(206, 23);

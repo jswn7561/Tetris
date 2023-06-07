@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Tetris
 {
@@ -38,7 +36,7 @@ namespace Tetris
             mciSendString("close " + alias, null, 0, 0);
         }
 
-        [DllImport("winmm.dll", EntryPoint = "mciSendString", CharSet = CharSet.Auto)]
+        [DllImport("winmm.dll", CharSet = CharSet.Auto)]
         private static extern int mciSendString(string lpstrCommand, StringBuilder lpstrReturnString, int uReturnLength, int hwndCallback);
     }
 }

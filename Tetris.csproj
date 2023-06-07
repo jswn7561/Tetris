@@ -50,7 +50,7 @@
     <None Update="Assets\AudioClip\hold.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Assets\AudioClip\main_music.wav">
+    <None Update="Assets\AudioClip\main_music.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\AudioClip\move.wav">

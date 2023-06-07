@@ -86,7 +86,7 @@
             retryBtn.BackgroundImageLayout = ImageLayout.Zoom;
             retryBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
             retryBtn.ForeColor = Color.Black;
-            retryBtn.Location = new Point(48, 757);
+            retryBtn.Location = new Point(48, 691);
             retryBtn.Margin = new Padding(4, 3, 4, 3);
             retryBtn.Name = "retryBtn";
             retryBtn.PressedBackgroundImage = Properties.Resources.button_replay_large_pressed;
@@ -117,7 +117,7 @@
             homeBtn.BackgroundImageLayout = ImageLayout.Zoom;
             homeBtn.Font = new Font("Kleptocracy Titling Rg", 15F, FontStyle.Bold, GraphicsUnit.Point);
             homeBtn.ForeColor = Color.Black;
-            homeBtn.Location = new Point(48, 691);
+            homeBtn.Location = new Point(48, 757);
             homeBtn.Margin = new Padding(4, 3, 4, 3);
             homeBtn.Name = "homeBtn";
             homeBtn.PressedBackgroundImage = Properties.Resources.button_home_pressed;
