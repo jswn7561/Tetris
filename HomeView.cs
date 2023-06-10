@@ -34,14 +34,15 @@ namespace Tetris
         private void AddDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
-            game.AddLevel();
-            SelectDifficultPic(game.difficuleLevel);
+            game.AddDifficultyLevel();
+            SelectDifficultPic(game.difficultyLevel);
         }
+
         private void SubDifficult(object sender, EventArgs e)
         {
             var game = Game.Instance;
-            game.SubLevel();
-            SelectDifficultPic(game.difficuleLevel);
+            game.SubDifficultyLevel();
+            SelectDifficultPic(game.difficultyLevel);
         }
 
         private void SelectDifficultPic(int difficuleLevel)

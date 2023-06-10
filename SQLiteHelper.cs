@@ -8,28 +8,28 @@ namespace Tetris
         private static SQLiteHelper instance;
         public static SQLiteHelper Instance => instance ??= new SQLiteHelper();
 
-        public SQLiteConnection sqliteConn;
+        public SQLiteConnection connection;
 
         public SQLiteHelper()
         {
-            sqliteConn = new SQLiteConnection("data source=data.sqlite");
+            connection = new SQLiteConnection("data source=data.sqlite");
         }
 
         public void CreateTable()
         {
-            if (sqliteConn.State == ConnectionState.Closed) sqliteConn.Open();
-            SQLiteCommand cmd = new(sqliteConn)
+            if (connection.State == ConnectionState.Closed) connection.Open();
+            SQLiteCommand cmd = new(connection)
             {
                 CommandText = "create table if not exists user_info(name varchar(50),score INTEGER)"
             };
             cmd.ExecuteNonQuery();
-            sqliteConn.Close();
+            connection.Close();
         }
 
         public bool SaveOrUpdateUserScore(UserInfo userInfo)
         {
-            if (sqliteConn.State == ConnectionState.Closed) sqliteConn.Open();
-            SQLiteCommand cmd = new(sqliteConn);
+            if (connection.State == ConnectionState.Closed) connection.Open();
+            SQLiteCommand cmd = new(connection);
             try
             {
                 if (UserExist(userInfo.name))
@@ -47,7 +47,7 @@ namespace Tetris
                 Console.WriteLine(ex.Message);
             } finally
             {
-                sqliteConn.Close();
+                connection.Close();
             }
             return false;
         }
@@ -59,13 +59,13 @@ namespace Tetris
                 List<UserInfo> datas = new();
                 using (SQLiteCommand cmd = new())
                 {
-                    if (sqliteConn.State != ConnectionState.Open) sqliteConn.Open();
-                    cmd.Connection = sqliteConn;
+                    if (connection.State != ConnectionState.Open) connection.Open();
+                    cmd.Connection = connection;
                     cmd.CommandText = "SELECT * FROM user_info ORDER BY score DESC limit " + topNum + ";";
                     SQLiteDataAdapter da = new(cmd);
                     DataTable dt = new();
                     da.Fill(dt);
-                    sqliteConn.Close();
+                    connection.Close();
 
                     foreach (DataRow dd in dt.Rows)
                     {
@@ -85,14 +85,14 @@ namespace Tetris
             }
             finally
             {
-                sqliteConn.Close();
+                connection.Close();
             }
             return new List<UserInfo>();
         }
 
         private bool UserExist(string name)
         {
-            SQLiteCommand mDbCmd = sqliteConn.CreateCommand();
+            SQLiteCommand mDbCmd = connection.CreateCommand();
             mDbCmd.CommandText = "SELECT COUNT(*) FROM user_info where name='" + name + "';";
             int row = Convert.ToInt32(mDbCmd.ExecuteScalar());
             if (0 < row)

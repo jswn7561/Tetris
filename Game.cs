@@ -22,7 +22,7 @@ namespace Tetris
         public Size mapSize { get; private set; }
         public Brick brick { get; private set; }
         public Brick nextBrick { get; private set; }
-        public int difficuleLevel { get; private set; }
+        public int difficultyLevel { get; private set; }
         public UserInfo user { get; private set; }
         public int level { get => levelControl.level; }
         public int score { get => levelControl.score; }
@@ -50,7 +50,7 @@ namespace Tetris
             var json = Encoding.UTF8.GetString(Resources.BrickConfigs);
             brickConfigs = JsonConvert.DeserializeObject<BrickData[]>(json);
             random = new Random();
-            difficuleLevel = 1;
+            difficultyLevel = 1;
         }
 
         private void InitData()
@@ -61,10 +61,10 @@ namespace Tetris
 
         public void Start()
         {
-            levelControl.Init(difficuleLevel);
+            levelControl.Init(difficultyLevel);
             InitData();
             CreateBrick();
-            PaintMap();
+            Paint();
             OnMsgUpdate?.Invoke();
             OnStart?.Invoke();
         }
@@ -104,7 +104,7 @@ namespace Tetris
         public void MoveBrick(Direction direction)
         {
             brick.Move(direction);
-            PaintMap();
+            Paint();
         }
 
         public void RotateBrick()
@@ -114,7 +114,7 @@ namespace Tetris
                 AudioManager.Instance.PlayBrickRotate();
             }
 
-            PaintMap();
+            Paint();
         }
 
         public void CombineBrick()
@@ -188,7 +188,7 @@ namespace Tetris
             return true;
         }
 
-        private void PaintMap()
+        private void Paint()
         {
             var g = Graphics.FromImage(mapImg);
             g.Clear(Color.Transparent);
@@ -226,21 +226,22 @@ namespace Tetris
             OnNextBrickPaint?.Invoke(nextBrickImg);
         }
 
-        public void AddLevel()
+        public void AddDifficultyLevel()
         {
-            if (difficuleLevel >= 3)
+            if (difficultyLevel >= 3)
             {
                 return;
             }
-            difficuleLevel++;
+            difficultyLevel++;
         }
-        public void SubLevel()
+
+        public void SubDifficultyLevel()
         {
-            if (difficuleLevel <= 1)
+            if (difficultyLevel <= 1)
             {
                 return;
             }
-            difficuleLevel--;
+            difficultyLevel--;
         }
 
         public void SetName(string n)
