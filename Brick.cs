@@ -187,7 +187,8 @@ namespace Tetris
                         detected = false;
                         if (beyondLowerBound)
                         {
-                            Game.Instance.CreateBrick();
+                            detected = true;
+                            //Game.Instance.CreateBrick();
                         }
                     }
                     else if (penetrateState == PenetrateState.NotStart)

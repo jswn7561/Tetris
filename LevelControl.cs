@@ -9,18 +9,22 @@ namespace Tetris
 {
     internal class LevelControl
     {
-        private int baseScore = 10;
-        private int upScore = 5;
-        private int curLevelScore = 0;
-        private int nextLevelScore = 0;
-        public int score { get; private set; }
-        public int line { get; private set; }
-        public int level { get; private set; }
-        public int interval { get; private set; }
-        public float goalRatio { get; private set; }
+        private int baseScore = 10;                 // 升级的基础分数
+        private int upScore = 5;                    // 升级的每级递增分数
+        private int curLevelScore = 0;              // 升级到当前等级需要的分数
+        private int nextLevelScore = 0;             // 从当前等级升级到下一等级需要的分数
+        public int score { get; private set; }      // 分数
+        public int line { get; private set; }       // 消除行数
+        public int level { get; private set; }      // 等级
+        public int interval { get; private set; }   // timer 的 Interval
+        public float goalRatio { get; private set; }// 从当前等级升级到下一等级已经获得分数的比例
         public LevelControl()
         {
         }
+        /// <summary>
+        /// 初始化数据，包括分数、行数、等级、比例、间隔
+        /// </summary>
+        /// <param name="difficultLevel"></param>
         public void Init(int difficultLevel)
         {
             score = 0;
@@ -45,21 +49,25 @@ namespace Tetris
         /// <summary>
         /// 更新分数、等级、下落速度
         /// </summary>
-        /// <param name="clearLineNum"></param>
+        /// <param name="clearLineNum">消除的行数</param>
         public void Update(int clearLineNum)
         {
+            // 消除 1 行得 1 分
             if (clearLineNum == 1)
             {
                 score += 1;
             }
+            // 消除 2 行得 3 分
             else if (clearLineNum == 2)
             {
                 score += 3;
             }
+            // 消除 3 行得 5 分
             else if (clearLineNum == 3)
             {
                 score += 5;
             }
+            // 消除 4 行得 8 分
             else
             {
                 score += 8;
