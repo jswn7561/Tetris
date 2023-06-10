@@ -107,10 +107,14 @@ namespace Tetris
             brick.Move(direction);
             Paint();
         }
+
         public void DownBrick()
         {
-            while (brick.Move(Direction.Down)) ;
-            PaintMap();
+            while (brick.Move(Direction.Down))
+            {
+            }
+
+            Paint();
         }
 
         public void RotateBrick()
